@@ -1,9 +1,10 @@
+
 function initializeMobileMenu() {
-    const mobileButton = document.querySelector('.mobile-menu-btn');
+    const button = document.querySelector('.mobile-menu-btn');
     const nav = document.querySelector('nav');
 
-    if (mobileButton && nav) {
-        mobileButton.addEventListener('click', () => {
+    if(button && nav){
+        button.addEventListener('click', () => {
             nav.classList.toggle('mobile-open');
         });
     }
