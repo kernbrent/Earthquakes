@@ -774,6 +774,27 @@ nav a:hover {
 .game-future .game-list-date {
     color: white;
 }
+/* =========================================================
+   MOBILE CALENDAR ORDER FIX
+========================================================= */
+
+@media(max-width:1100px){
+
+    .calendar-layout {
+
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    .games-sidebar {
+
+        order: -1;
+
+        margin-bottom: 40px;
+    }
+
+}
 
 
 /* =========================================================
