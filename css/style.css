@@ -29,10 +29,11 @@ nav a:hover {
     color: gold;
 }
 
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.logo-area img{
+    width:auto;
+    height:72px;
+    object-fit:contain;
+    display:block;
 }
 
 .logo-area img {
@@ -947,7 +948,37 @@ img{
    FINAL MOBILE NAV OVERRIDE
 ===================================================== */
 
+/* =====================================================
+   FINAL MOBILE HEADER FIX
+===================================================== */
+
 @media screen and (max-width: 900px){
+
+    header{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        flex-wrap:wrap;
+        padding:16px 18px;
+        position:relative;
+        z-index:9999;
+    }
+
+    .logo-area{
+        display:flex;
+        align-items:center;
+        gap:12px;
+        max-width:75%;
+    }
+
+    .logo-area h1{
+        font-size:1.5rem;
+        line-height:1.1;
+    }
+
+    .logo-area p{
+        font-size:.8rem;
+    }
 
     .mobile-menu-btn{
         display:block !important;
@@ -956,8 +987,6 @@ img{
         color:white;
         font-size:2rem;
         cursor:pointer;
-        margin-left:auto;
-        z-index:9999;
     }
 
     header nav{
@@ -980,12 +1009,8 @@ img{
         background:rgba(255,255,255,.05);
     }
 
-    header{
-        padding-bottom:20px !important;
-    }
-
     .hero{
-        padding-top:220px !important;
+        padding-top:120px !important;
     }
 
 }
