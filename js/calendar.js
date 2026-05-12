@@ -1,26 +1,11 @@
+
 const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
+    "January","February","March","April","May","June",
+    "July","August","September","October","November","December"
 ];
 
 const dayNames = [
-    "Sun",
-    "Mon",
-    "Tue",
-    "Wed",
-    "Thu",
-    "Fri",
-    "Sat"
+    "Sun","Mon","Tue","Wed","Thu","Fri","Sat"
 ];
 
 fetch('data/calendar.json')
@@ -32,6 +17,9 @@ fetch('data/calendar.json')
 
     const monthNav =
         document.getElementById('monthNav');
+
+    const gamesList =
+        document.getElementById('games-list');
 
     const groupedMonths = {};
 
@@ -49,11 +37,72 @@ fetch('data/calendar.json')
 
     });
 
+    const games = events
+        .filter(event => event.EventType === "Game")
+        .sort((a,b) => new Date(a.Date) - new Date(b.Date));
+
+    const today = new Date();
+    today.setHours(0,0,0,0);
+
+    games.forEach(game => {
+
+        const gameDate = new Date(game.Date);
+        gameDate.setHours(0,0,0,0);
+
+        let statusClass = "game-future";
+
+        if(gameDate < today){
+            statusClass = "game-past";
+        }
+        else if(gameDate.getTime() === today.getTime()){
+            statusClass = "game-today";
+        }
+
+        const card =
+            document.createElement('div');
+
+        card.className =
+            `game-list-item ${statusClass}`;
+
+        const formattedDate =
+            new Date(game.Date).toLocaleDateString(
+                'en-US',
+                {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric'
+                }
+            );
+
+        card.innerHTML = `
+            <div class="game-badge">GAME</div>
+
+            <div class="game-list-date">
+                ${formattedDate}
+            </div>
+
+            <div class="game-list-time">
+                ${game.Time}
+            </div>
+
+            <div class="game-list-location">
+                ${game.Location}
+            </div>
+
+            ${game.Opponent ? `
+                <div class="game-list-opponent">
+                    vs ${game.Opponent}
+                </div>
+            ` : ''}
+        `;
+
+        gamesList.appendChild(card);
+
+    });
+
     Object.keys(groupedMonths).forEach(monthKey => {
 
         const month = parseInt(monthKey);
-
-        // NAV BUTTON
 
         const navButton =
             document.createElement('a');
@@ -65,8 +114,6 @@ fetch('data/calendar.json')
             monthNames[month];
 
         monthNav.appendChild(navButton);
-
-        // CALENDAR
 
         const section =
             document.createElement('section');
@@ -90,8 +137,6 @@ fetch('data/calendar.json')
 
         grid.className =
             'calendar-grid';
-
-        // DAYS OF WEEK
 
         dayNames.forEach(day => {
 
@@ -117,8 +162,6 @@ fetch('data/calendar.json')
         const daysInMonth =
             new Date(2026, month + 1, 0).getDate();
 
-        // EMPTY BOXES
-
         for(let i=0; i<startingDay; i++){
 
             const empty =
@@ -130,8 +173,6 @@ fetch('data/calendar.json')
             grid.appendChild(empty);
 
         }
-
-        // DAYS
 
         for(let day=1; day<=daysInMonth; day++){
 
