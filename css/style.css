@@ -77,7 +77,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 5000;
-    border-bottom: 1px solid rgba(255,255,255,.08);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
 }
 
 .logo-link {
@@ -162,13 +162,13 @@ nav a:hover {
 
 .btn-secondary,
 .quick-secondary {
-    border: 1px solid rgba(255,255,255,.18);
+    border: 1px solid rgba(255, 255, 255, .18);
     color: white;
 }
 
 .btn-secondary:hover,
 .quick-secondary:hover {
-    background: rgba(255,255,255,.05);
+    background: rgba(255, 255, 255, .05);
 }
 
 /* =========================================
@@ -182,10 +182,10 @@ nav a:hover {
     align-items: center;
 
     background:
-    linear-gradient(to right,
-    rgba(0,0,0,.88),
-    rgba(0,0,0,.52)),
-    url('../images/EarthquakeTeam4.jpg');
+        linear-gradient(to right,
+            rgba(0, 0, 0, .88),
+            rgba(0, 0, 0, .52)),
+        url('../images/EarthquakeTeam4.jpg');
 
     background-size: cover;
     background-position: center;
@@ -220,7 +220,7 @@ nav a:hover {
 }
 
 .hero-card {
-    background: rgba(255,255,255,.08);
+    background: rgba(255, 255, 255, .08);
     backdrop-filter: blur(12px);
     border-radius: 28px;
     padding: 38px;
@@ -234,7 +234,7 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     padding: 14px 0;
-    border-bottom: 1px solid rgba(255,255,255,.08);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
 }
 
 .hero-card-footer {
@@ -270,7 +270,7 @@ nav a:hover {
 .coach-info-grid {
     margin-top: 35px;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
@@ -281,8 +281,8 @@ nav a:hover {
 .info-box,
 .info-card,
 .coach-card {
-    background: rgba(255,255,255,.05);
-    border: 1px solid rgba(255,255,255,.06);
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .06);
     border-radius: 22px;
     padding: 26px;
 }
@@ -323,10 +323,10 @@ nav a:hover {
     overflow: hidden;
 
     background:
-    linear-gradient(to right,
-    rgba(0,0,0,.88),
-    rgba(0,0,0,.65)),
-    url('../images/EarthquakeTeam1.jpg');
+        linear-gradient(to right,
+            rgba(0, 0, 0, .88),
+            rgba(0, 0, 0, .65)),
+        url('../images/EarthquakeTeam1.jpg');
 
     background-size: cover;
     background-position: center;
@@ -356,8 +356,8 @@ nav a:hover {
 .month-nav-section {
     padding: 28px 0;
     background: #101010;
-    border-top: 1px solid rgba(255,255,255,.06);
-    border-bottom: 1px solid rgba(255,255,255,.06);
+    border-top: 1px solid rgba(255, 255, 255, .06);
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
 }
 
 .coach-nav,
@@ -373,7 +373,7 @@ nav a:hover {
     border-radius: 12px;
     text-decoration: none;
     color: white;
-    background: rgba(255,255,255,.05);
+    background: rgba(255, 255, 255, .05);
     transition: .25s;
 }
 
@@ -397,7 +397,7 @@ nav a:hover {
 .assistant-placeholder {
     height: 320px;
     border-radius: 28px;
-    background: rgba(255,255,255,.05);
+    background: rgba(255, 255, 255, .05);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -424,7 +424,7 @@ nav a:hover {
 
 .calendar-grid {
     display: grid;
-    grid-template-columns: repeat(7,1fr);
+    grid-template-columns: repeat(7, 1fr);
     gap: 12px;
 }
 
@@ -441,7 +441,7 @@ nav a:hover {
     background: #161616;
     border-radius: 16px;
     padding: 12px;
-    border: 1px solid rgba(255,255,255,.05);
+    border: 1px solid rgba(255, 255, 255, .05);
 }
 
 .calendar-day.empty {
@@ -458,7 +458,7 @@ nav a:hover {
     padding: 10px;
     border-radius: 12px;
     margin-bottom: 10px;
-    background: rgba(255,255,255,.06);
+    background: rgba(255, 255, 255, .06);
     font-size: .85rem;
 }
 
@@ -490,7 +490,7 @@ nav a:hover {
 .action-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,.68);
+    background: rgba(0, 0, 0, .68);
 }
 
 .action-content {
@@ -502,10 +502,10 @@ nav a:hover {
     text-align: center;
 
     background:
-    linear-gradient(to right,
-    rgba(0,0,0,.88),
-    rgba(0,0,0,.65)),
-    url('../images/EarthquakeTeam1.jpg');
+        linear-gradient(to right,
+            rgba(0, 0, 0, .88),
+            rgba(0, 0, 0, .65)),
+        url('../images/EarthquakeTeam1.jpg');
 
     background-size: cover;
     background-position: center;
@@ -546,7 +546,7 @@ footer {
     }
 
     .calendar-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
@@ -579,7 +579,7 @@ footer {
         text-align: center;
         padding: 14px;
         border-radius: 12px;
-        background: rgba(255,255,255,.05);
+        background: rgba(255, 255, 255, .05);
     }
 
     .hero {
@@ -649,4 +649,148 @@ footer {
         padding: 28px;
     }
 
+    /* =========================================
+   JOIN PAGE
+========================================= */
+
+    .join-modern-section {
+        padding: 110px 0;
+    }
+
+    .join-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+        align-items: start;
+    }
+
+    .join-content {
+        padding-top: 10px;
+    }
+
+    .join-content h2 {
+        font-size: 3.2rem;
+        margin: 20px 0;
+    }
+
+    .join-content p {
+        font-size: 1.05rem;
+        max-width: 620px;
+    }
+
+    .join-feature-grid {
+        margin-top: 40px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .join-form-wrapper {
+        background: rgba(255, 255, 255, .05);
+        border: 1px solid rgba(255, 255, 255, .08);
+        border-radius: 30px;
+        padding: 42px;
+        backdrop-filter: blur(12px);
+    }
+
+    .modern-registration-form h3 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .modern-form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+    }
+
+    .modern-registration-form input,
+    .modern-registration-form select,
+    .modern-registration-form textarea {
+
+        width: 100%;
+        padding: 16px 18px;
+
+        background: #1b1b1b !important;
+        color: white !important;
+
+        border: 1px solid rgba(255, 255, 255, .08);
+        border-radius: 14px;
+
+        font-size: 1rem;
+
+        appearance: none;
+        outline: none;
+    }
+
+    .modern-registration-form textarea {
+        resize: vertical;
+        min-height: 140px;
+    }
+
+    .modern-registration-form input::placeholder,
+    .modern-registration-form textarea::placeholder {
+        color: #9d9d9d;
+    }
+
+    .modern-registration-form select {
+        color: #bdbdbd;
+    }
+
+    .full-width-input {
+        grid-column: span 2;
+    }
+
+    .modern-submit-btn {
+
+        width: 100%;
+        margin-top: 26px;
+
+        padding: 18px;
+
+        border: none;
+        border-radius: 16px;
+
+        background: #f2c230;
+        color: black;
+
+        font-size: 1rem;
+        font-weight: bold;
+
+        cursor: pointer;
+        transition: .25s;
+    }
+
+    .modern-submit-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    @media(max-width:1100px) {
+
+        .join-layout {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    @media(max-width:700px) {
+
+        .join-feature-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .modern-form-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .full-width-input {
+            grid-column: span 1;
+        }
+
+        .join-form-wrapper {
+            padding: 28px;
+        }
+
+    }
 }
