@@ -1,11 +1,30 @@
-/* =========================================
+/* =========================================================
    NTX EARTHQUAKES — MASTER STYLESHEET
-========================================= */
+   ---------------------------------------------------------
+   ORGANIZATION
+   1. RESET / BASE
+   2. GLOBAL LAYOUT
+   3. HEADER / NAVIGATION
+   4. BUTTONS
+   5. HOMEPAGE HERO
+   6. SHARED CONTENT COMPONENTS
+   7. COACH / INTERNAL HERO PAGES
+   8. CALENDAR
+   9. JOIN PAGE
+   10. ACTION / CTA
+   11. FOOTER
+   12. RESPONSIVE
+========================================================= */
+
+
+/* =========================================================
+   1. RESET / BASE
+========================================================= */
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -16,13 +35,30 @@ body {
     background: #0c0c0c;
     color: white;
     font-family: Arial, sans-serif;
-    overflow-x: hidden;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* =========================================
-   GLOBAL
-========================================= */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.1;
+}
+
+p {
+    color: #d5d5d5;
+}
+
+
+/* =========================================================
+   2. GLOBAL LAYOUT
+========================================================= */
 
 .container {
     width: 90%;
@@ -37,7 +73,8 @@ body {
 .section-tag,
 .eyebrow,
 .coach-eyebrow,
-.calendar-eyebrow {
+.calendar-eyebrow,
+.join-eyebrow {
     color: #f2c230;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -45,39 +82,30 @@ body {
     font-weight: bold;
 }
 
-h1,
-h2,
-h3,
-h4 {
-    line-height: 1.1;
-}
 
-p {
-    color: #d5d5d5;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-/* =========================================
-   HEADER
-========================================= */
+/* =========================================================
+   3. HEADER / NAVIGATION
+========================================================= */
 
 header {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
+
     padding: 18px 42px;
-    background: rgba(0, 0, 0, .72);
-    backdrop-filter: blur(12px);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    background: rgba(0, 0, 0, .72);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
     z-index: 5000;
-    border-bottom: 1px solid rgba(255, 255, 255, .08);
 }
 
 .logo-link {
@@ -133,20 +161,26 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* =========================================
-   BUTTONS
-========================================= */
+
+/* =========================================================
+   4. BUTTONS
+========================================================= */
 
 .btn-primary,
 .btn-secondary,
 .quick-primary,
 .quick-secondary {
+
+    display: inline-block;
+
     padding: 16px 28px;
+
     border-radius: 14px;
+
     text-decoration: none;
     font-weight: bold;
+
     transition: .25s;
-    display: inline-block;
 }
 
 .btn-primary,
@@ -162,55 +196,103 @@ nav a:hover {
 
 .btn-secondary,
 .quick-secondary {
-    border: 1px solid rgba(255, 255, 255, .18);
+    border: 1px solid rgba(255,255,255,.18);
     color: white;
 }
 
 .btn-secondary:hover,
 .quick-secondary:hover {
-    background: rgba(255, 255, 255, .05);
+    background: rgba(255,255,255,.05);
 }
 
-/* =========================================
-   HERO
-========================================= */
+
+/* =========================================================
+   5. HOMEPAGE HERO
+========================================================= */
 
 .hero {
-    min-height: 100vh;
-    padding-top: 150px;
+
+    position: relative;
+
+    min-height: 72vh;
+
+    padding-top: 140px;
+    padding-bottom: 90px;
+
     display: flex;
     align-items: center;
 
+    overflow: hidden;
+
     background:
-        linear-gradient(to right,
-            rgba(0, 0, 0, .88),
-            rgba(0, 0, 0, .52)),
+        linear-gradient(
+            to right,
+            rgba(0,0,0,.88),
+            rgba(0,0,0,.52)
+        ),
         url('../images/EarthquakeTeam4.jpg');
 
     background-size: cover;
     background-position: center;
 }
 
+/* Fade into next section */
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 140px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0),
+            rgba(0,0,0,.88)
+        );
+
+    pointer-events: none;
+}
+
 .hero-content {
+
+    position: relative;
+    z-index: 2;
+
     width: 90%;
     max-width: 1350px;
+
     margin: auto;
 
     display: grid;
     grid-template-columns: 1.2fr .8fr;
+
     gap: 60px;
     align-items: center;
 }
 
+.hero-left {
+    max-width: 720px;
+}
+
 .hero-left h1 {
-    font-size: 5.8rem;
-    margin: 18px 0 24px;
+
+    font-size: clamp(3rem, 7vw, 5.3rem);
+
     line-height: .92;
+
+    margin: 18px 0 24px;
 }
 
 .hero-left p {
     max-width: 640px;
-    font-size: 1.1rem;
+    font-size: 1.08rem;
 }
 
 .hero-buttons {
@@ -220,10 +302,16 @@ nav a:hover {
 }
 
 .hero-card {
-    background: rgba(255, 255, 255, .08);
+
+    background: rgba(255,255,255,.08);
+
     backdrop-filter: blur(12px);
+
     border-radius: 28px;
+
     padding: 38px;
+
+    border: 1px solid rgba(255,255,255,.06);
 }
 
 .hero-card h3 {
@@ -231,10 +319,15 @@ nav a:hover {
 }
 
 .schedule-row {
+
     display: flex;
     justify-content: space-between;
+
     padding: 14px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
 }
 
 .hero-card-footer {
@@ -242,9 +335,10 @@ nav a:hover {
     color: #f2c230;
 }
 
-/* =========================================
-   FLOATING SECTION
-========================================= */
+
+/* =========================================================
+   6. SHARED CONTENT COMPONENTS
+========================================================= */
 
 .integrated-image img,
 .coach-photo img,
@@ -255,12 +349,19 @@ nav a:hover {
 }
 
 .floating-card {
+
     position: relative;
+
     max-width: 760px;
-    margin: -130px auto 0;
-    background: #161616;
+
+    margin: -90px auto 0;
+
     padding: 55px;
+
+    background: #161616;
+
     border-radius: 34px;
+
     z-index: 2;
 }
 
@@ -268,9 +369,14 @@ nav a:hover {
 .skill-grid,
 .stats-row,
 .coach-info-grid {
+
     margin-top: 35px;
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
     gap: 20px;
 }
 
@@ -281,9 +387,13 @@ nav a:hover {
 .info-box,
 .info-card,
 .coach-card {
-    background: rgba(255, 255, 255, .05);
-    border: 1px solid rgba(255, 255, 255, .06);
+
+    background: rgba(255,255,255,.05);
+
+    border: 1px solid rgba(255,255,255,.06);
+
     border-radius: 22px;
+
     padding: 26px;
 }
 
@@ -295,17 +405,22 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
-/* =========================================
-   COACH SECTION
-========================================= */
+
+/* =========================================================
+   7. COACH / INTERNAL HERO PAGES
+========================================================= */
 
 .coach-layout,
 .location-layout,
 .coach-layout-modern,
 .assistant-layout {
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 60px;
+
     align-items: center;
 }
 
@@ -316,16 +431,22 @@ nav a:hover {
 
 .coach-hero,
 .calendar-hero,
-.page-hero {
+.page-hero,
+.join-hero {
+
     position: relative;
+
     padding-top: 180px;
     padding-bottom: 120px;
+
     overflow: hidden;
 
     background:
-        linear-gradient(to right,
-            rgba(0, 0, 0, .88),
-            rgba(0, 0, 0, .65)),
+        linear-gradient(
+            to right,
+            rgba(0,0,0,.88),
+            rgba(0,0,0,.65)
+        ),
         url('../images/EarthquakeTeam1.jpg');
 
     background-size: cover;
@@ -333,35 +454,50 @@ nav a:hover {
 }
 
 .coach-hero-content,
-.calendar-hero-content {
+.calendar-hero-content,
+.join-hero-content {
+
     position: relative;
     z-index: 2;
 }
 
 .coach-hero h1,
 .calendar-hero h1,
-.page-hero h1 {
+.page-hero h1,
+.join-hero h1 {
+
     font-size: 4.5rem;
+
     margin-top: 20px;
 }
 
 .coach-hero p,
 .calendar-hero p,
-.page-hero p {
+.page-hero p,
+.join-hero p {
+
     max-width: 700px;
+
     margin-top: 20px;
 }
 
 .coach-nav-section,
 .month-nav-section {
+
     padding: 28px 0;
+
     background: #101010;
-    border-top: 1px solid rgba(255, 255, 255, .06);
-    border-bottom: 1px solid rgba(255, 255, 255, .06);
+
+    border-top:
+        1px solid rgba(255,255,255,.06);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.06);
 }
 
 .coach-nav,
 .month-nav {
+
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
@@ -369,11 +505,17 @@ nav a:hover {
 
 .coach-nav a,
 .month-nav a {
+
     padding: 12px 20px;
+
     border-radius: 12px;
+
     text-decoration: none;
+
     color: white;
-    background: rgba(255, 255, 255, .05);
+
+    background: rgba(255,255,255,.05);
+
     transition: .25s;
 }
 
@@ -384,9 +526,13 @@ nav a:hover {
 }
 
 .coach-tag {
+
     color: #f2c230;
+
     font-weight: bold;
+
     text-transform: uppercase;
+
     letter-spacing: 2px;
 }
 
@@ -395,22 +541,44 @@ nav a:hover {
 }
 
 .assistant-placeholder {
+
     height: 320px;
+
     border-radius: 28px;
-    background: rgba(255, 255, 255, .05);
+
+    background: rgba(255,255,255,.05);
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     color: #999;
+
     font-size: 1.2rem;
 }
 
-/* =========================================
-   CALENDAR
-========================================= */
+
+/* =========================================================
+   8. CALENDAR
+========================================================= */
 
 .calendar-section {
     padding: 90px 0;
+}
+
+.calendar-layout {
+
+    display: grid;
+
+    grid-template-columns: 1fr 360px;
+
+    gap: 42px;
+
+    align-items: start;
+}
+
+.calendar-main {
+    min-width: 0;
 }
 
 .month-calendar-section {
@@ -423,25 +591,38 @@ nav a:hover {
 }
 
 .calendar-grid {
+
     display: grid;
+
     grid-template-columns: repeat(7, 1fr);
+
     gap: 12px;
 }
 
 .calendar-day-header {
+
     text-align: center;
+
     padding: 14px;
+
     background: #1b1b1b;
+
     border-radius: 12px;
+
     font-weight: bold;
 }
 
 .calendar-day {
+
     min-height: 140px;
-    background: #161616;
-    border-radius: 16px;
+
     padding: 12px;
-    border: 1px solid rgba(255, 255, 255, .05);
+
+    background: #161616;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(255,255,255,.05);
 }
 
 .calendar-day.empty {
@@ -455,10 +636,15 @@ nav a:hover {
 }
 
 .event-card {
+
     padding: 10px;
+
     border-radius: 12px;
+
     margin-bottom: 10px;
-    background: rgba(255, 255, 255, .06);
+
+    background: rgba(255,255,255,.06);
+
     font-size: .85rem;
 }
 
@@ -468,29 +654,324 @@ nav a:hover {
     margin-bottom: 6px;
 }
 
-/* =========================================
-   ACTION SECTION
-========================================= */
+
+/* =========================================================
+   CALENDAR SIDEBAR
+========================================================= */
+
+.games-sidebar {
+    position: sticky;
+    top: 120px;
+}
+
+.games-sidebar-inner {
+
+    background: rgba(255,255,255,.05);
+
+    border: 1px solid rgba(255,255,255,.06);
+
+    border-radius: 28px;
+
+    padding: 30px;
+
+    backdrop-filter: blur(12px);
+}
+
+.games-header h3 {
+    margin-top: 12px;
+    font-size: 2rem;
+}
+
+#games-list {
+    margin-top: 28px;
+}
+
+.game-list-item {
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    margin-bottom: 18px;
+
+    background: rgba(255,255,255,.04);
+
+    border: 1px solid rgba(255,255,255,.05);
+
+    transition: .25s;
+}
+
+.game-list-item:hover {
+    transform: translateY(-2px);
+}
+
+.game-badge {
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    padding: 4px 10px;
+
+    border-radius: 999px;
+
+    background: rgba(242,194,48,.14);
+
+    color: #f2c230;
+
+    font-size: .72rem;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.game-list-date {
+    font-size: 1.08rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.game-list-time {
+    margin-bottom: 8px;
+}
+
+.game-list-location {
+    color: #cfcfcf;
+    font-size: .94rem;
+}
+
+.game-list-opponent {
+    margin-top: 12px;
+    color: #f2c230;
+    font-weight: bold;
+}
+
+/* Past Games */
+
+.game-past {
+    opacity: .42;
+    padding: 12px 16px;
+}
+
+.game-past .game-list-date {
+    margin-bottom: 0;
+    font-size: .95rem;
+}
+
+.game-past .game-badge {
+    margin-bottom: 6px;
+}
+
+/* Today */
+
+.game-today {
+
+    background: rgba(242,194,48,.12);
+
+    border: 1px solid rgba(242,194,48,.35);
+}
+
+.game-today .game-list-date {
+    color: #f2c230;
+    font-weight: 800;
+}
+
+/* Future */
+
+.game-future .game-list-date {
+    color: white;
+}
+
+
+/* =========================================================
+   9. JOIN PAGE
+========================================================= */
+
+.join-modern-section {
+    padding: 110px 0;
+}
+
+.join-layout {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+.join-content {
+    padding-top: 10px;
+}
+
+.join-content h2 {
+    font-size: 3.2rem;
+    margin: 20px 0;
+}
+
+.join-content p {
+    font-size: 1.05rem;
+    max-width: 620px;
+}
+
+.join-feature-grid {
+
+    margin-top: 40px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.join-form-wrapper {
+
+    background: rgba(255,255,255,.05);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 30px;
+
+    padding: 42px;
+
+    backdrop-filter: blur(12px);
+}
+
+.modern-registration-form h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.modern-form-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+/* Birth Date Helper */
+
+.modern-registration-form input[type="date"]:before {
+    content: attr(placeholder);
+    color: #9d9d9d;
+    margin-right: 10px;
+}
+
+.modern-registration-form input[type="date"]:focus:before,
+.modern-registration-form input[type="date"]:valid:before {
+    display: none;
+}
+
+/* Form Inputs */
+
+.modern-registration-form input,
+.modern-registration-form select,
+.modern-registration-form textarea {
+
+    width: 100%;
+
+    padding: 16px 18px;
+
+    background: #1b1b1b !important;
+
+    color: white !important;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 14px;
+
+    font-size: 1rem;
+
+    appearance: none;
+
+    outline: none;
+}
+
+.modern-registration-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.modern-registration-form input::placeholder,
+.modern-registration-form textarea::placeholder {
+    color: #9d9d9d;
+}
+
+.modern-registration-form select {
+    color: #bdbdbd;
+}
+
+.full-width-input {
+    grid-column: span 2;
+}
+
+.modern-submit-btn {
+
+    width: 100%;
+
+    margin-top: 26px;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background: #f2c230;
+
+    color: black;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.modern-submit-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   10. ACTION / CTA
+========================================================= */
 
 .action-banner {
+
     position: relative;
+
     min-height: 760px;
+
     display: flex;
     align-items: center;
 }
 
 .action-bg {
+
     position: absolute;
+
     inset: 0;
+
     width: 100%;
     height: 100%;
+
     object-fit: cover;
 }
 
 .action-overlay {
+
     position: absolute;
+
     inset: 0;
-    background: rgba(0, 0, 0, .68);
+
+    background: rgba(0,0,0,.68);
 }
 
 .action-content {
@@ -499,32 +980,55 @@ nav a:hover {
 }
 
 .cta {
+
     text-align: center;
 
     background:
-        linear-gradient(to right,
-            rgba(0, 0, 0, .88),
-            rgba(0, 0, 0, .65)),
+        linear-gradient(
+            to right,
+            rgba(0,0,0,.88),
+            rgba(0,0,0,.65)
+        ),
         url('../images/EarthquakeTeam1.jpg');
 
     background-size: cover;
     background-position: center;
 }
 
-/* =========================================
-   FOOTER
-========================================= */
+
+/* =========================================================
+   11. FOOTER
+========================================================= */
 
 footer {
+
     padding: 36px;
+
     text-align: center;
+
     background: black;
+
     color: #888;
 }
 
-/* =========================================
-   MOBILE
-========================================= */
+
+/* =========================================================
+   12. RESPONSIVE
+========================================================= */
+
+@media(max-width:1100px) {
+
+    .join-layout,
+    .calendar-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .games-sidebar {
+        position: relative;
+        top: auto;
+    }
+
+}
 
 @media(max-width:1000px) {
 
@@ -533,7 +1037,12 @@ footer {
     .location-layout,
     .coach-layout-modern,
     .assistant-layout {
+
         grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        gap: 40px;
     }
 
     .hero-left h1 {
@@ -563,10 +1072,15 @@ footer {
     }
 
     nav {
+
         display: none;
+
         width: 100%;
+
         flex-direction: column;
+
         margin-top: 20px;
+
         gap: 12px;
     }
 
@@ -575,19 +1089,24 @@ footer {
     }
 
     nav a {
+
         width: 100%;
+
         text-align: center;
+
         padding: 14px;
+
         border-radius: 12px;
-        background: rgba(255, 255, 255, .05);
+
+        background: rgba(255,255,255,.05);
     }
 
     .hero {
-        padding-top: 170px;
-    }
 
-    .hero-content {
-        gap: 40px;
+        min-height: auto;
+
+        padding-top: 170px;
+        padding-bottom: 70px;
     }
 
     .hero-left h1 {
@@ -596,7 +1115,9 @@ footer {
 
     .coach-hero h1,
     .calendar-hero h1,
-    .page-hero h1 {
+    .page-hero h1,
+    .join-hero h1 {
+
         font-size: 3rem;
     }
 
@@ -621,8 +1142,18 @@ footer {
     .feature-grid,
     .skill-grid,
     .stats-row,
-    .coach-info-grid {
+    .coach-info-grid,
+    .join-feature-grid {
+
         grid-template-columns: 1fr;
+    }
+
+    .modern-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width-input {
+        grid-column: span 1;
     }
 
     .calendar-grid {
@@ -645,295 +1176,9 @@ footer {
         font-size: 2.7rem;
     }
 
-    .floating-card {
-        padding: 28px;
-    }
-}
-
-/* =========================================
-   JOIN PAGE
-========================================= */
-
-.join-modern-section {
-    padding: 110px 0;
-}
-
-.join-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    align-items: start;
-}
-
-.join-content {
-    padding-top: 10px;
-}
-
-.join-content h2 {
-    font-size: 3.2rem;
-    margin: 20px 0;
-}
-
-.join-content p {
-    font-size: 1.05rem;
-    max-width: 620px;
-}
-
-.join-feature-grid {
-    margin-top: 40px;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
-}
-
-.join-form-wrapper {
-    background: rgba(255, 255, 255, .05);
-    border: 1px solid rgba(255, 255, 255, .08);
-    border-radius: 30px;
-    padding: 42px;
-    backdrop-filter: blur(12px);
-}
-
-.modern-registration-form h3 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-.modern-form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-}
-/* Birth date helper text */
-
-.modern-registration-form input[type="date"]:before {
-    content: attr(placeholder);
-    color: #9d9d9d;
-    margin-right: 10px;
-}
-
-.modern-registration-form input[type="date"]:focus:before,
-.modern-registration-form input[type="date"]:valid:before {
-    display: none;
-}
-/* - End Birth Day Helper CSS */
-
-
-.modern-registration-form input,
-.modern-registration-form select,
-.modern-registration-form textarea {
-
-    width: 100%;
-    padding: 16px 18px;
-
-    background: #1b1b1b !important;
-    color: white !important;
-
-    border: 1px solid rgba(255, 255, 255, .08);
-    border-radius: 14px;
-
-    font-size: 1rem;
-
-    appearance: none;
-    outline: none;
-}
-
-.modern-registration-form textarea {
-    resize: vertical;
-    min-height: 140px;
-}
-
-.modern-registration-form input::placeholder,
-.modern-registration-form textarea::placeholder {
-    color: #9d9d9d;
-}
-
-.modern-registration-form select {
-    color: #bdbdbd;
-}
-
-.full-width-input {
-    grid-column: span 2;
-}
-
-.modern-submit-btn {
-
-    width: 100%;
-    margin-top: 26px;
-
-    padding: 18px;
-
-    border: none;
-    border-radius: 16px;
-
-    background: #f2c230;
-    color: black;
-
-    font-size: 1rem;
-    font-weight: bold;
-
-    cursor: pointer;
-    transition: .25s;
-}
-
-.modern-submit-btn:hover {
-    transform: translateY(-2px);
-}
-
-@media(max-width:1100px) {
-
-    .join-layout {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-@media(max-width:700px) {
-
-    .join-feature-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .modern-form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .full-width-input {
-        grid-column: span 1;
-    }
-
+    .floating-card,
     .join-form-wrapper {
         padding: 28px;
-    }
-
-}
-
-/* =========================================
-   CALENDAR SIDEBAR
-========================================= */
-
-.calendar-layout {
-    display: grid;
-    grid-template-columns: 1fr 360px;
-    gap: 42px;
-    align-items: start;
-}
-
-.calendar-main {
-    min-width: 0;
-}
-
-.games-sidebar {
-    position: sticky;
-    top: 120px;
-}
-
-.games-sidebar-inner {
-    background: rgba(255,255,255,.05);
-    border: 1px solid rgba(255,255,255,.06);
-    border-radius: 28px;
-    padding: 30px;
-    backdrop-filter: blur(12px);
-}
-
-.games-header h3 {
-    margin-top: 12px;
-    font-size: 2rem;
-}
-
-#games-list {
-    margin-top: 28px;
-}
-
-.game-list-item {
-    padding: 20px;
-    border-radius: 18px;
-    margin-bottom: 18px;
-    background: rgba(255,255,255,.04);
-    border: 1px solid rgba(255,255,255,.05);
-    transition: .25s;
-}
-
-.game-list-item:hover {
-    transform: translateY(-2px);
-}
-
-.game-badge {
-    display: inline-block;
-    margin-bottom: 10px;
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: rgba(242,194,48,.14);
-    color: #f2c230;
-    font-size: .72rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.game-list-date {
-    font-size: 1.08rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.game-list-time {
-    margin-bottom: 8px;
-}
-
-.game-list-location {
-    color: #cfcfcf;
-    font-size: .94rem;
-}
-
-.game-list-opponent {
-    margin-top: 12px;
-    color: #f2c230;
-    font-weight: bold;
-}
-
-.game-past {
-    opacity: .42;
-}
-
-.game-today {
-    background: rgba(242,194,48,.12);
-    border: 1px solid rgba(242,194,48,.35);
-}
-
-.game-today .game-list-date {
-    color: #f2c230;
-    font-weight: 800;
-}
-
-.game-future .game-list-date {
-    color: white;
-}
-/* Compact past games */
-
-.game-past {
-    opacity: .42;
-    padding: 12px 16px;
-}
-
-.game-past .game-list-date {
-    margin-bottom: 0;
-    font-size: .95rem;
-}
-
-.game-past .game-badge {
-    margin-bottom: 6px;
-}
-
-@media(max-width:1100px){
-
-    .calendar-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .games-sidebar {
-        position: relative;
-        top: auto;
     }
 
 }
