@@ -524,25 +524,7 @@ footer{
 <body>
 
 <header>
-
-    <div class="logo-area">
-        <img src="images/logo.png">
-
-        <div>
-            <h1>NTX Earthquakes</h1>
-            <p>North Texas Girls Soccer Club</p>
-        </div>
-    </div>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="coach.html">Coach</a>
-        <a href="calendar.html">Calendar</a>
-        <a href="join.html">Join</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
+    <div id="header-placeholder"></div>
 </header>
 
 <section class="hero">
@@ -845,6 +827,13 @@ footer{
     © 2026 NTX Earthquakes Soccer Club
 </footer>
 
+<script>
+fetch('components/header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header-placeholder').innerHTML = data;
+  });
+</script>
 
 <script src="js/mobile-nav.js"></script>
 </body>
