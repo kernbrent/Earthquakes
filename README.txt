@@ -1,11 +1,14 @@
-IMPORTANT:
-This site uses a shared header file.
 
-To make the shared menu work properly:
+NTX Earthquakes Phase 2 Site Rebuild
 
-1. Open the folder in Visual Studio Code
-2. Install the 'Live Server' extension
-3. Right-click index.html
-4. Select 'Open with Live Server'
+Instructions:
+1. Extract all files into your Earthquakes project folder.
+2. Allow overwrite of existing files.
+3. Do NOT delete the .git folder.
+4. Commit and push changes normally through VS Code.
 
-This allows the shared header system to function correctly.
+All CSS is centralized in:
+css/style.css
+
+Shared header component:
+components/header.html
