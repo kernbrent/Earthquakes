@@ -51,27 +51,58 @@
 
             </div>
 
-            <div class="hero-card">
+            <div class="hero-card recruitment-card" onclick="openRecruitmentModal()">
 
-                <h3>Recruitment & Training</h3>
+                <div class="recruitment-top">
 
-                <div class="schedule-row">
-                    <span>Monday</span>
-                    <span>6 PM – 7 PM</span>
+                    <span class="section-tag">
+                        Join The Earthquakes
+                    </span>
+
+
+
                 </div>
 
-                <div class="schedule-row">
-                    <span>Thursday</span>
-                    <span>6 PM – 7 PM</span>
-                </div>
+                <div class="recruitment-content">
 
-                <div class="schedule-row">
-                    <span>Location</span>
-                    <span>Frisco, TX</span>
-                </div>
+                    <h3>
+                        Recruitment & Tryouts
+                    </h3>
 
-                <div class="hero-card-footer">
-                    Competitive • Development • Leadership
+                    <p class="recruitment-subtext">
+                        Seeking committed girls transitioning
+                        from recreational soccer into a
+                        competitive club environment.
+                    </p>
+
+                    <div class="tryout-row">
+                        <span>Monday • May 18</span>
+                        <span>6 PM – 7 PM</span>
+                    </div>
+
+                    <div class="tryout-row">
+                        <span>Thursday • May 21</span>
+                        <span>6 PM – 7 PM</span>
+                    </div>
+
+                    <div class="tryout-row">
+                        <span>Monday • May 25</span>
+                        <span>6 PM – 7 PM</span>
+                    </div>
+
+                    <div class="tryout-row">
+                        <span>Thursday • May 28</span>
+                        <span>6 PM – 7 PM</span>
+                    </div>
+
+                    <div class="recruitment-goal-row">
+                        <span>Recruitment Goal - 8 New Girls</span>
+                    </div>
+
+                    <div class="recruitment-footer">
+                        Click for full recruitment details
+                    </div>
+
                 </div>
 
             </div>
@@ -315,22 +346,118 @@
         © 2026 NTX Earthquakes Soccer Club
     </footer>
 
-    
-<script>
-fetch('components/header.html')
-.then(response => response.text())
-.then(data => {
-    document.getElementById('header-placeholder').innerHTML = data;
 
-    if (typeof initializeMobileMenu === 'function') {
-        initializeMobileMenu();
-    }
-});
-</script>
+    <script>
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
 
-<script src="js/mobile-nav.js"></script>
-<script src="js/loadHeader.js"></script>
+                if (typeof initializeMobileMenu === 'function') {
+                    initializeMobileMenu();
+                }
+            });
+    </script>
 
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/loadHeader.js"></script>
+    <!-- =========================================
+     RECRUITMENT MODAL
+========================================= -->
+
+    <div class="recruitment-modal" id="recruitmentModal">
+
+        <div class="recruitment-modal-overlay" onclick="closeRecruitmentModal()"></div>
+
+        <div class="recruitment-modal-content">
+
+            <button class="modal-close" onclick="closeRecruitmentModal()">
+                ×
+            </button>
+
+            <span class="section-tag">
+                Recruitment Process
+            </span>
+
+            <h2>
+                Join NTX Earthquakes
+            </h2>
+
+            <p>
+                We are seeking competitive, coachable,
+                hard-working girls looking to transition
+                from recreational soccer into a
+                higher-level club environment.
+            </p>
+
+            <div class="modal-grid">
+
+                <div class="modal-card">
+                    <h4>Club Focus</h4>
+
+                    <p>
+                        Technical development,
+                        confidence building,
+                        tactical growth,
+                        and competitive preparation.
+                    </p>
+                </div>
+
+                <div class="modal-card">
+                    <h4>Recruiting Goal</h4>
+
+                    <p>
+                        Targeting 8 additional players
+                        for the upcoming season roster.
+                    </p>
+                </div>
+
+                <div class="modal-card">
+                    <h4>Ideal Players</h4>
+
+                    <p>
+                        Girls ready to move beyond
+                        recreational soccer and commit
+                        to consistent development.
+                    </p>
+                </div>
+
+                <div class="modal-card">
+                    <h4>What To Expect</h4>
+
+                    <p>
+                        High-energy training,
+                        technical instruction,
+                        tactical awareness,
+                        and positive culture.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function openRecruitmentModal() {
+
+            document
+                .getElementById('recruitmentModal')
+                .classList.add('active');
+
+        }
+
+        function closeRecruitmentModal() {
+
+            document
+                .getElementById('recruitmentModal')
+                .classList.remove('active');
+
+        }
+
+    </script>
 </body>
 
 </html>
