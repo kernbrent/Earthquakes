@@ -46,7 +46,7 @@ nav a:hover {
 }
 
 .hero {
-    background: url('../images/EarthquakeTeam2.jpg') center/cover no-repeat;
+    background: url('../images/EarthquakeTeam2.png') center/cover no-repeat;
     min-height: 70vh;
     display: flex;
     align-items: center;
