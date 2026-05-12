@@ -1,4 +1,3 @@
-
 const monthNames = [
     "January","February","March","April","May","June",
     "July","August","September","October","November","December"
@@ -7,6 +6,19 @@ const monthNames = [
 const dayNames = [
     "Sun","Mon","Tue","Wed","Thu","Fri","Sat"
 ];
+
+/* =========================================
+   SAFE LOCAL DATE PARSER
+========================================= */
+
+function parseLocalDate(dateString){
+
+    const [year, month, day] =
+        dateString.split('-').map(Number);
+
+    return new Date(year, month - 1, day);
+
+}
 
 fetch('data/calendar.json')
 .then(response => response.json())
@@ -25,9 +37,11 @@ fetch('data/calendar.json')
 
     events.forEach(event => {
 
-        const date = new Date(event.Date);
+        const date =
+            parseLocalDate(event.Date);
 
-        const month = date.getMonth();
+        const month =
+            date.getMonth();
 
         if(!groupedMonths[month]){
             groupedMonths[month] = [];
@@ -37,16 +51,25 @@ fetch('data/calendar.json')
 
     });
 
+    /* =========================================
+       UPCOMING GAMES SIDEBAR
+    ========================================= */
+
     const games = events
         .filter(event => event.EventType === "Game")
-        .sort((a,b) => new Date(a.Date) - new Date(b.Date));
+        .sort((a,b) =>
+            parseLocalDate(a.Date) -
+            parseLocalDate(b.Date)
+        );
 
     const today = new Date();
     today.setHours(0,0,0,0);
 
     games.forEach(game => {
 
-        const gameDate = new Date(game.Date);
+        const gameDate =
+            parseLocalDate(game.Date);
+
         gameDate.setHours(0,0,0,0);
 
         let statusClass = "game-future";
@@ -65,7 +88,8 @@ fetch('data/calendar.json')
             `game-list-item ${statusClass}`;
 
         const formattedDate =
-            new Date(game.Date).toLocaleDateString(
+            parseLocalDate(game.Date)
+            .toLocaleDateString(
                 'en-US',
                 {
                     month: 'short',
@@ -74,31 +98,62 @@ fetch('data/calendar.json')
                 }
             );
 
-        card.innerHTML = `
-            <div class="game-badge">GAME</div>
+        /* =========================================
+           COMPACT PAST GAMES
+        ========================================= */
 
-            <div class="game-list-date">
-                ${formattedDate}
-            </div>
+        if(statusClass === "game-past"){
 
-            <div class="game-list-time">
-                ${game.Time}
-            </div>
+            card.innerHTML = `
 
-            <div class="game-list-location">
-                ${game.Location}
-            </div>
-
-            ${game.Opponent ? `
-                <div class="game-list-opponent">
-                    vs ${game.Opponent}
+                <div class="game-badge">
+                    GAME
                 </div>
-            ` : ''}
-        `;
+
+                <div class="game-list-date">
+                    ${formattedDate}
+                </div>
+
+            `;
+
+        }
+        else{
+
+            card.innerHTML = `
+
+                <div class="game-badge">
+                    GAME
+                </div>
+
+                <div class="game-list-date">
+                    ${formattedDate}
+                </div>
+
+                <div class="game-list-time">
+                    ${game.Time}
+                </div>
+
+                <div class="game-list-location">
+                    ${game.Location}
+                </div>
+
+                ${game.Opponent ? `
+                    <div class="game-list-opponent">
+                        vs ${game.Opponent}
+                    </div>
+                ` : ''}
+
+            `;
+
+        }
 
         gamesList.appendChild(card);
 
     });
+
+    /* =========================================
+       CALENDAR GENERATION
+    ========================================= */
 
     Object.keys(groupedMonths).forEach(monthKey => {
 

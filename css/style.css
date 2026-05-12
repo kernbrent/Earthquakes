@@ -909,6 +909,21 @@ footer {
 .game-future .game-list-date {
     color: white;
 }
+/* Compact past games */
+
+.game-past {
+    opacity: .42;
+    padding: 12px 16px;
+}
+
+.game-past .game-list-date {
+    margin-bottom: 0;
+    font-size: .95rem;
+}
+
+.game-past .game-badge {
+    margin-bottom: 6px;
+}
 
 @media(max-width:1100px){
 
