@@ -1547,3 +1547,17 @@ footer {
     }
 
 }
+/* Email Handlers for consistent style */
+a[href^="mailto:"] {
+
+    color: #f2c230;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+a[href^="mailto:"]:hover {
+
+    text-decoration: underline;
+}
