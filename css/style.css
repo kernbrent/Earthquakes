@@ -943,3 +943,49 @@ img{
     }
 
 }
+/* =====================================================
+   FINAL MOBILE NAV OVERRIDE
+===================================================== */
+
+@media screen and (max-width: 900px){
+
+    .mobile-menu-btn{
+        display:block !important;
+        background:none;
+        border:none;
+        color:white;
+        font-size:2rem;
+        cursor:pointer;
+        margin-left:auto;
+        z-index:9999;
+    }
+
+    header nav{
+        display:none !important;
+        width:100%;
+        flex-direction:column;
+        gap:12px;
+        margin-top:20px;
+    }
+
+    header nav.mobile-open{
+        display:flex !important;
+    }
+
+    header nav a{
+        width:100%;
+        text-align:center;
+        padding:14px;
+        border-radius:12px;
+        background:rgba(255,255,255,.05);
+    }
+
+    header{
+        padding-bottom:20px !important;
+    }
+
+    .hero{
+        padding-top:220px !important;
+    }
+
+}
