@@ -648,149 +648,163 @@ footer {
     .floating-card {
         padding: 28px;
     }
+}
 
-    /* =========================================
+/* =========================================
    JOIN PAGE
 ========================================= */
 
-    .join-modern-section {
-        padding: 110px 0;
-    }
+.join-modern-section {
+    padding: 110px 0;
+}
+
+.join-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.join-content {
+    padding-top: 10px;
+}
+
+.join-content h2 {
+    font-size: 3.2rem;
+    margin: 20px 0;
+}
+
+.join-content p {
+    font-size: 1.05rem;
+    max-width: 620px;
+}
+
+.join-feature-grid {
+    margin-top: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.join-form-wrapper {
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 30px;
+    padding: 42px;
+    backdrop-filter: blur(12px);
+}
+
+.modern-registration-form h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.modern-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+/* Birth date helper text */
+
+.modern-registration-form input[type="date"]:before {
+    content: attr(placeholder);
+    color: #9d9d9d;
+    margin-right: 10px;
+}
+
+.modern-registration-form input[type="date"]:focus:before,
+.modern-registration-form input[type="date"]:valid:before {
+    display: none;
+}
+/* - End Birth Day Helper CSS */
+
+
+.modern-registration-form input,
+.modern-registration-form select,
+.modern-registration-form textarea {
+
+    width: 100%;
+    padding: 16px 18px;
+
+    background: #1b1b1b !important;
+    color: white !important;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 14px;
+
+    font-size: 1rem;
+
+    appearance: none;
+    outline: none;
+}
+
+.modern-registration-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.modern-registration-form input::placeholder,
+.modern-registration-form textarea::placeholder {
+    color: #9d9d9d;
+}
+
+.modern-registration-form select {
+    color: #bdbdbd;
+}
+
+.full-width-input {
+    grid-column: span 2;
+}
+
+.modern-submit-btn {
+
+    width: 100%;
+    margin-top: 26px;
+
+    padding: 18px;
+
+    border: none;
+    border-radius: 16px;
+
+    background: #f2c230;
+    color: black;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: .25s;
+}
+
+.modern-submit-btn:hover {
+    transform: translateY(-2px);
+}
+
+@media(max-width:1100px) {
 
     .join-layout {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 70px;
-        align-items: start;
+        grid-template-columns: 1fr;
     }
 
-    .join-content {
-        padding-top: 10px;
-    }
+}
 
-    .join-content h2 {
-        font-size: 3.2rem;
-        margin: 20px 0;
-    }
-
-    .join-content p {
-        font-size: 1.05rem;
-        max-width: 620px;
-    }
+@media(max-width:700px) {
 
     .join-feature-grid {
-        margin-top: 40px;
-
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 22px;
-    }
-
-    .join-form-wrapper {
-        background: rgba(255, 255, 255, .05);
-        border: 1px solid rgba(255, 255, 255, .08);
-        border-radius: 30px;
-        padding: 42px;
-        backdrop-filter: blur(12px);
-    }
-
-    .modern-registration-form h3 {
-        font-size: 2rem;
-        margin-bottom: 30px;
+        grid-template-columns: 1fr;
     }
 
     .modern-form-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 18px;
-    }
-
-    .modern-registration-form input,
-    .modern-registration-form select,
-    .modern-registration-form textarea {
-
-        width: 100%;
-        padding: 16px 18px;
-
-        background: #1b1b1b !important;
-        color: white !important;
-
-        border: 1px solid rgba(255, 255, 255, .08);
-        border-radius: 14px;
-
-        font-size: 1rem;
-
-        appearance: none;
-        outline: none;
-    }
-
-    .modern-registration-form textarea {
-        resize: vertical;
-        min-height: 140px;
-    }
-
-    .modern-registration-form input::placeholder,
-    .modern-registration-form textarea::placeholder {
-        color: #9d9d9d;
-    }
-
-    .modern-registration-form select {
-        color: #bdbdbd;
+        grid-template-columns: 1fr;
     }
 
     .full-width-input {
-        grid-column: span 2;
+        grid-column: span 1;
     }
 
-    .modern-submit-btn {
-
-        width: 100%;
-        margin-top: 26px;
-
-        padding: 18px;
-
-        border: none;
-        border-radius: 16px;
-
-        background: #f2c230;
-        color: black;
-
-        font-size: 1rem;
-        font-weight: bold;
-
-        cursor: pointer;
-        transition: .25s;
+    .join-form-wrapper {
+        padding: 28px;
     }
 
-    .modern-submit-btn:hover {
-        transform: translateY(-2px);
-    }
-
-    @media(max-width:1100px) {
-
-        .join-layout {
-            grid-template-columns: 1fr;
-        }
-
-    }
-
-    @media(max-width:700px) {
-
-        .join-feature-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .modern-form-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .full-width-input {
-            grid-column: span 1;
-        }
-
-        .join-form-wrapper {
-            padding: 28px;
-        }
-
-    }
 }
