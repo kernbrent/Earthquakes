@@ -317,15 +317,21 @@
         © 2026 NTX Earthquakes Soccer Club
     </footer>
 
-    <script>
-        fetch('components/header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            });
-    </script>
+    
+<script>
+fetch('components/header.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('header-placeholder').innerHTML = data;
 
-    <script src="js/mobile-nav.js"></script>
+    if (typeof initializeMobileMenu === 'function') {
+        initializeMobileMenu();
+    }
+});
+</script>
+
+<script src="js/mobile-nav.js"></script>
+
 </body>
 
 </html>
