@@ -878,3 +878,68 @@ img{
     }
 
 }
+
+
+/* =====================================================
+   MOBILE FIXES
+===================================================== */
+
+.mobile-menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:2rem;
+    cursor:pointer;
+}
+
+@media(max-width:900px){
+
+    header{
+        flex-wrap:wrap;
+        padding:16px 18px;
+        position:relative;
+        z-index:999;
+    }
+
+    .mobile-menu-btn{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        width:100%;
+        flex-direction:column;
+        gap:10px;
+        margin-top:16px;
+    }
+
+    nav.mobile-open{
+        display:flex;
+    }
+
+    nav a{
+        width:100%;
+        text-align:center;
+        padding:14px;
+        background:#111;
+        border-radius:12px;
+    }
+
+    .logo-area img{
+        height:55px;
+    }
+
+}
+
+/* Prevent hero image overlap */
+
+@media(max-width:900px){
+
+    .hero,
+    .hero-section,
+    .hero-banner{
+        padding-top:140px !important;
+    }
+
+}
