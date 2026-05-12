@@ -29,11 +29,11 @@ nav a:hover {
     color: gold;
 }
 
-.logo-area img{
-    width:auto;
-    height:72px;
-    object-fit:contain;
-    display:block;
+.logo-area img {
+    width: auto;
+    height: 72px;
+    object-fit: contain;
+    display: block;
 }
 
 .logo-area img {
@@ -46,7 +46,7 @@ nav a:hover {
 }
 
 .hero {
-    background: url('../images/coach-team-2.jpg') center/cover no-repeat;
+    background: url('../images/EarthquakeTeam2.jpg') center/cover no-repeat;
     min-height: 70vh;
     display: flex;
     align-items: center;
@@ -110,633 +110,636 @@ footer {
         margin-top: 15px;
     }
 }
-html{
-    scroll-behavior:smooth;
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* ================= HERO ================= */
 
-.coach-hero{
-    position:relative;
+.coach-hero {
+    position: relative;
 
-    min-height:65vh;
+    min-height: 65vh;
 
     background:
         linear-gradient(to right,
-        rgba(0,0,0,.88),
-        rgba(0,0,0,.45)),
+            rgba(0, 0, 0, .88),
+            rgba(0, 0, 0, .45)),
         url('../images/EarthquakeTeam3.png');
 
-    background-size:cover;
-    background-position:center;
+    background-size: cover;
+    background-position: center;
 
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
 }
 
-.coach-hero-overlay{
-    position:absolute;
-    inset:0;
+.coach-hero-overlay {
+    position: absolute;
+    inset: 0;
 }
 
-.coach-hero-content{
-    position:relative;
-    z-index:2;
-    color:white;
+.coach-hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
 }
 
-.coach-eyebrow{
-    color:#f2c230;
-    letter-spacing:3px;
-    font-weight:bold;
-    font-size:.85rem;
+.coach-eyebrow {
+    color: #f2c230;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: .85rem;
 }
 
-.coach-hero h1{
-    font-size:5rem;
-    margin:20px 0;
+.coach-hero h1 {
+    font-size: 5rem;
+    margin: 20px 0;
 }
 
-.coach-hero p{
-    max-width:700px;
-    font-size:1.1rem;
-    color:#d0d0d0;
+.coach-hero p {
+    max-width: 700px;
+    font-size: 1.1rem;
+    color: #d0d0d0;
 }
 
 /* ================= NAV ================= */
 
-.coach-nav-section{
-    background:#101010;
-    padding:25px 0;
-    border-top:1px solid rgba(255,255,255,.05);
-    border-bottom:1px solid rgba(255,255,255,.05);
+.coach-nav-section {
+    background: #101010;
+    padding: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, .05);
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
 }
 
-.coach-nav{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
+.coach-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-.coach-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    padding:14px 22px;
-    border-radius:12px;
-    background:#1c1c1c;
-    transition:.3s;
+.coach-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 14px 22px;
+    border-radius: 12px;
+    background: #1c1c1c;
+    transition: .3s;
 }
 
-.coach-nav a:hover{
-    background:#f2c230;
-    color:black;
+.coach-nav a:hover {
+    background: #f2c230;
+    color: black;
 }
 
 /* ================= MAIN COACH ================= */
 
-.coach-section-modern{
-    background:#0f0f0f;
-    padding:120px 30px;
+.coach-section-modern {
+    background: #0f0f0f;
+    padding: 120px 30px;
 }
 
-.coach-layout-modern{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
+.coach-layout-modern {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
 }
 
-.coach-image-modern img{
-    width:100%;
-    border-radius:30px;
-    box-shadow:0 25px 70px rgba(0,0,0,.5);
+.coach-image-modern img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .5);
 }
 
-.coach-content-modern{
-    color:white;
+.coach-content-modern {
+    color: white;
 }
 
-.coach-tag{
-    color:#f2c230;
-    text-transform:uppercase;
-    letter-spacing:3px;
-    font-size:.8rem;
-    font-weight:bold;
+.coach-tag {
+    color: #f2c230;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: .8rem;
+    font-weight: bold;
 }
 
 .coach-content-modern h2,
-.assistant-content h2{
-    font-size:3.5rem;
-    margin:18px 0 24px;
-    color:white;
+.assistant-content h2 {
+    font-size: 3.5rem;
+    margin: 18px 0 24px;
+    color: white;
 }
 
-.coach-description{
-    color:#d0d0d0;
-    margin-bottom:35px;
+.coach-description {
+    color: #d0d0d0;
+    margin-bottom: 35px;
 }
 
-.coach-info-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:22px;
+.coach-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
 }
 
-.coach-card{
-    background:#1a1a1a;
-    padding:28px;
-    border-radius:22px;
-    border:1px solid rgba(255,255,255,.05);
+.coach-card {
+    background: #1a1a1a;
+    padding: 28px;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, .05);
 }
 
-.coach-card h3{
-    color:#f2c230;
-    margin-bottom:14px;
+.coach-card h3 {
+    color: #f2c230;
+    margin-bottom: 14px;
 }
 
-.coach-card p{
-    color:#d0d0d0;
+.coach-card p {
+    color: #d0d0d0;
 }
 
 /* ================= ASSISTANTS ================= */
 
-.assistant-coach-section{
-    background:#141414;
-    padding:90px 30px;
-    border-top:1px solid rgba(255,255,255,.05);
+.assistant-coach-section {
+    background: #141414;
+    padding: 90px 30px;
+    border-top: 1px solid rgba(255, 255, 255, .05);
 }
 
-.assistant-layout{
-    display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:50px;
-    align-items:center;
+.assistant-layout {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 50px;
+    align-items: center;
 }
 
-.assistant-placeholder{
-    width:100%;
-    min-height:320px;
+.assistant-placeholder {
+    width: 100%;
+    min-height: 320px;
 
-    background:#1d1d1d;
+    background: #1d1d1d;
 
-    border-radius:26px;
+    border-radius: 26px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    color:#777;
-    font-size:1.2rem;
+    color: #777;
+    font-size: 1.2rem;
 
-    border:2px dashed rgba(255,255,255,.08);
+    border: 2px dashed rgba(255, 255, 255, .08);
 }
 
-.assistant-content{
-    color:white;
+.assistant-content {
+    color: white;
 }
 
-.assistant-content p{
-    color:#d0d0d0;
+.assistant-content p {
+    color: #d0d0d0;
 }
 
-.assistant-contact{
-    margin-top:30px;
+.assistant-contact {
+    margin-top: 30px;
 
-    background:#1a1a1a;
+    background: #1a1a1a;
 
-    padding:25px;
+    padding: 25px;
 
-    border-radius:20px;
+    border-radius: 20px;
 
-    border:1px solid rgba(255,255,255,.05);
+    border: 1px solid rgba(255, 255, 255, .05);
 }
 
-.assistant-contact p{
-    margin-bottom:10px;
+.assistant-contact p {
+    margin-bottom: 10px;
 }
 
 /* ================= MOBILE ================= */
 
-@media(max-width:950px){
+@media(max-width:950px) {
 
     .coach-layout-modern,
-    .assistant-layout{
-        grid-template-columns:1fr;
+    .assistant-layout {
+        grid-template-columns: 1fr;
     }
 
-    .coach-hero h1{
-        font-size:3rem;
+    .coach-hero h1 {
+        font-size: 3rem;
     }
 
     .coach-content-modern h2,
-    .assistant-content h2{
-        font-size:2.5rem;
+    .assistant-content h2 {
+        font-size: 2.5rem;
     }
 
 }
+
 /* ================= CALENDAR HERO ================= */
 
-.calendar-hero{
-    position:relative;
+.calendar-hero {
+    position: relative;
 
-    min-height:55vh;
+    min-height: 55vh;
 
     background:
         linear-gradient(to right,
-        rgba(0,0,0,.88),
-        rgba(0,0,0,.45)),
+            rgba(0, 0, 0, .88),
+            rgba(0, 0, 0, .45)),
         url('../images/EarthquakeTeam4.jpg');
 
-    background-size:cover;
-    background-position:center;
+    background-size: cover;
+    background-position: center;
 
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
 }
 
-.calendar-overlay{
-    position:absolute;
-    inset:0;
+.calendar-overlay {
+    position: absolute;
+    inset: 0;
 }
 
-.calendar-hero-content{
-    position:relative;
-    z-index:2;
-    color:white;
+.calendar-hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
 }
 
-.calendar-eyebrow{
-    color:#f2c230;
-    letter-spacing:3px;
-    font-weight:bold;
-    font-size:.85rem;
+.calendar-eyebrow {
+    color: #f2c230;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: .85rem;
 }
 
-.calendar-hero h1{
-    font-size:5rem;
-    margin:20px 0;
+.calendar-hero h1 {
+    font-size: 5rem;
+    margin: 20px 0;
 }
 
-.calendar-hero p{
-    max-width:700px;
-    font-size:1.1rem;
-    color:#d0d0d0;
+.calendar-hero p {
+    max-width: 700px;
+    font-size: 1.1rem;
+    color: #d0d0d0;
 }
 
 /* ================= MONTH NAV ================= */
 
-.month-nav-section{
-    background:#111;
-    padding:25px 0;
-    border-top:1px solid rgba(255,255,255,.05);
-    border-bottom:1px solid rgba(255,255,255,.05);
+.month-nav-section {
+    background: #111;
+    padding: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, .05);
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
 }
 
-.month-nav{
-    display:flex;
-    gap:18px;
-    overflow-x:auto;
-    padding-bottom:5px;
+.month-nav {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 5px;
 }
 
-.month-nav a{
-    white-space:nowrap;
+.month-nav a {
+    white-space: nowrap;
 
-    text-decoration:none;
+    text-decoration: none;
 
-    color:white;
+    color: white;
 
-    background:#1d1d1d;
+    background: #1d1d1d;
 
-    padding:14px 22px;
+    padding: 14px 22px;
 
-    border-radius:14px;
+    border-radius: 14px;
 
-    transition:.3s;
+    transition: .3s;
 
-    font-weight:bold;
+    font-weight: bold;
 }
 
-.month-nav a:hover{
-    background:#f2c230;
-    color:black;
+.month-nav a:hover {
+    background: #f2c230;
+    color: black;
 }
 
 /* ================= CALENDAR ================= */
 
-.calendar-section{
-    background:#0f0f0f;
-    padding:90px 0;
+.calendar-section {
+    background: #0f0f0f;
+    padding: 90px 0;
 }
 
-.month-calendar-section{
-    margin-bottom:100px;
+.month-calendar-section {
+    margin-bottom: 100px;
 }
 
-.month-calendar-section h2{
-    color:white;
-    margin-bottom:35px;
+.month-calendar-section h2 {
+    color: white;
+    margin-bottom: 35px;
 }
 
-.calendar-grid{
-    display:grid;
-    grid-template-columns:repeat(7,1fr);
-    gap:14px;
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 14px;
 }
 
-.calendar-day-header{
-    background:#161616;
+.calendar-day-header {
+    background: #161616;
 
-    color:#f2c230;
+    color: #f2c230;
 
-    padding:18px;
+    padding: 18px;
 
-    text-align:center;
+    text-align: center;
 
-    border-radius:14px;
+    border-radius: 14px;
 
-    font-weight:bold;
+    font-weight: bold;
 }
 
-.calendar-day{
-    min-height:180px;
+.calendar-day {
+    min-height: 180px;
 
-    background:#181818;
+    background: #181818;
 
-    border-radius:20px;
+    border-radius: 20px;
 
-    padding:14px;
+    padding: 14px;
 
-    border:1px solid rgba(255,255,255,.04);
+    border: 1px solid rgba(255, 255, 255, .04);
 }
 
-.calendar-day.empty{
-    background:transparent;
-    border:none;
+.calendar-day.empty {
+    background: transparent;
+    border: none;
 }
 
-.day-number{
-    font-size:1.1rem;
-    font-weight:bold;
-    margin-bottom:10px;
-    color:white;
+.day-number {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
 }
 
 /* ================= EVENT CARDS ================= */
 
-.event-card{
-    margin-top:10px;
+.event-card {
+    margin-top: 10px;
 
-    padding:12px;
+    padding: 12px;
 
-    border-radius:14px;
+    border-radius: 14px;
 
-    font-size:.82rem;
+    font-size: .82rem;
 
-    color:white;
+    color: white;
 }
 
-.event-card.practice{
-    background:#204060;
+.event-card.practice {
+    background: #204060;
 }
 
-.event-card.game{
-    background:#5b1f1f;
+.event-card.game {
+    background: #5b1f1f;
 }
 
-.event-card.tryout{
-    background:#635100;
+.event-card.tryout {
+    background: #635100;
 }
 
-.event-card.meeting{
-    background:#3c2d5c;
+.event-card.meeting {
+    background: #3c2d5c;
 }
 
-.event-card.party{
-    background:#7a2b58;
+.event-card.party {
+    background: #7a2b58;
 }
 
-.event-card.other{
-    background:#444;
+.event-card.other {
+    background: #444;
 }
 
-.event-type{
-    font-weight:bold;
-    margin-bottom:5px;
+.event-type {
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.event-opponent{
-    margin-top:8px;
-    color:#f2c230;
-    font-weight:bold;
+.event-opponent {
+    margin-top: 8px;
+    color: #f2c230;
+    font-weight: bold;
 }
 
 /* ================= MOBILE ================= */
 
-@media(max-width:1000px){
+@media(max-width:1000px) {
 
-    .calendar-grid{
-        grid-template-columns:repeat(2,1fr);
+    .calendar-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
-@media(max-width:700px){
+@media(max-width:700px) {
 
-    .calendar-hero h1{
-        font-size:3rem;
+    .calendar-hero h1 {
+        font-size: 3rem;
     }
 
-    .calendar-grid{
-        grid-template-columns:1fr;
+    .calendar-grid {
+        grid-template-columns: 1fr;
     }
 
 }
+
 /* ================= JOIN PAGE ================= */
 
-.join-hero{
-    position:relative;
+.join-hero {
+    position: relative;
 
-    min-height:55vh;
+    min-height: 55vh;
 
     background:
         linear-gradient(to right,
-        rgba(0,0,0,.88),
-        rgba(0,0,0,.45)),
+            rgba(0, 0, 0, .88),
+            rgba(0, 0, 0, .45)),
         url('../images/EarthquakeTeam4.jpg');
 
-    background-size:cover;
-    background-position:center;
+    background-size: cover;
+    background-position: center;
 
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
 }
 
-.join-overlay{
-    position:absolute;
-    inset:0;
+.join-overlay {
+    position: absolute;
+    inset: 0;
 }
 
-.join-hero-content{
-    position:relative;
-    z-index:2;
-    color:white;
+.join-hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
 }
 
-.join-eyebrow{
-    color:#f2c230;
-    letter-spacing:3px;
-    font-weight:bold;
-    font-size:.85rem;
+.join-eyebrow {
+    color: #f2c230;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: .85rem;
 }
 
-.join-hero h1{
-    font-size:5rem;
-    margin:20px 0;
+.join-hero h1 {
+    font-size: 5rem;
+    margin: 20px 0;
 }
 
-.join-hero p{
-    max-width:700px;
-    color:#d0d0d0;
-    font-size:1.1rem;
+.join-hero p {
+    max-width: 700px;
+    color: #d0d0d0;
+    font-size: 1.1rem;
 }
 
-.join-modern-section{
-    background:#0f0f0f;
-    padding:100px 30px;
+.join-modern-section {
+    background: #0f0f0f;
+    padding: 100px 30px;
 }
 
-.join-layout{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:start;
+.join-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
 }
 
-.join-content{
-    color:white;
+.join-content {
+    color: white;
 }
 
-.join-content h2{
-    font-size:3rem;
-    margin:20px 0;
+.join-content h2 {
+    font-size: 3rem;
+    margin: 20px 0;
 }
 
-.join-content p{
-    color:#d0d0d0;
-    line-height:1.8;
+.join-content p {
+    color: #d0d0d0;
+    line-height: 1.8;
 }
 
-.join-feature-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:22px;
-    margin-top:40px;
+.join-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 40px;
 }
 
-.join-form-wrapper{
-    background:#171717;
+.join-form-wrapper {
+    background: #171717;
 
-    border-radius:30px;
+    border-radius: 30px;
 
-    padding:40px;
+    padding: 40px;
 
-    border:1px solid rgba(255,255,255,.05);
+    border: 1px solid rgba(255, 255, 255, .05);
 
-    box-shadow:0 25px 60px rgba(0,0,0,.45);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .45);
 }
 
-.modern-registration-form h3{
-    color:white;
-    font-size:2rem;
-    margin-bottom:30px;
+.modern-registration-form h3 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 30px;
 }
 
-.modern-form-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px;
+.modern-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
 }
 
 .modern-registration-form input,
 .modern-registration-form select,
-.modern-registration-form textarea{
+.modern-registration-form textarea {
 
-    background:#1f1f1f;
+    background: #1f1f1f;
 
-    border:1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255, 255, 255, .08);
 
-    color:white;
+    color: white;
 
-    padding:16px;
+    padding: 16px;
 
-    border-radius:14px;
+    border-radius: 14px;
 
-    font-size:1rem;
+    font-size: 1rem;
 }
 
 .modern-registration-form input:focus,
 .modern-registration-form select:focus,
-.modern-registration-form textarea:focus{
+.modern-registration-form textarea:focus {
 
-    outline:none;
+    outline: none;
 
-    border-color:#f2c230;
+    border-color: #f2c230;
 }
 
-.full-width-input{
-    grid-column:1 / -1;
+.full-width-input {
+    grid-column: 1 / -1;
 }
 
-.modern-submit-btn{
+.modern-submit-btn {
 
-    width:100%;
+    width: 100%;
 
-    margin-top:25px;
+    margin-top: 25px;
 
-    background:#f2c230;
+    background: #f2c230;
 
-    color:black;
+    color: black;
 
-    border:none;
+    border: none;
 
-    padding:18px;
+    padding: 18px;
 
-    border-radius:16px;
+    border-radius: 16px;
 
-    font-weight:bold;
+    font-weight: bold;
 
-    cursor:pointer;
+    cursor: pointer;
 
-    transition:.3s;
+    transition: .3s;
 }
 
-.modern-submit-btn:hover{
-    background:white;
+.modern-submit-btn:hover {
+    background: white;
 }
 
-@media(max-width:950px){
+@media(max-width:950px) {
 
-    .join-layout{
-        grid-template-columns:1fr;
+    .join-layout {
+        grid-template-columns: 1fr;
     }
 
-    .join-feature-grid{
-        grid-template-columns:1fr;
+    .join-feature-grid {
+        grid-template-columns: 1fr;
     }
 
-    .modern-form-grid{
-        grid-template-columns:1fr;
+    .modern-form-grid {
+        grid-template-columns: 1fr;
     }
 
-    .join-hero h1{
-        font-size:3rem;
+    .join-hero h1 {
+        font-size: 3rem;
     }
 
-    .join-content h2{
-        font-size:2.3rem;
+    .join-content h2 {
+        font-size: 2.3rem;
     }
 
 }
@@ -745,35 +748,35 @@ html{
    MOBILE RESPONSIVE UPGRADES
 ========================================================= */
 
-img{
-    max-width:100%;
-    height:auto;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-@media(max-width:950px){
+@media(max-width:950px) {
 
-    header{
-        flex-direction:column;
-        gap:20px;
-        padding:18px 20px;
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 18px 20px;
     }
 
-    .logo-area{
-        justify-content:center;
-        text-align:center;
+    .logo-area {
+        justify-content: center;
+        text-align: center;
     }
 
-    nav{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:12px;
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
     }
 
-    nav a{
-        padding:10px 14px;
-        background:#1a1a1a;
-        border-radius:10px;
-        font-size:.9rem;
+    nav a {
+        padding: 10px 14px;
+        background: #1a1a1a;
+        border-radius: 10px;
+        font-size: .9rem;
     }
 
     .hero-content,
@@ -784,52 +787,52 @@ img{
     .location-layout,
     .practice-grid,
     .two-column,
-    .coach-grid{
-        grid-template-columns:1fr !important;
+    .coach-grid {
+        grid-template-columns: 1fr !important;
     }
 
 }
 
-@media(max-width:700px){
+@media(max-width:700px) {
 
     .hero,
     .coach-hero,
     .calendar-hero,
-    .join-hero{
-        min-height:auto;
-        padding:140px 0 80px;
+    .join-hero {
+        min-height: auto;
+        padding: 140px 0 80px;
     }
 
     .hero-left h1,
     .coach-hero h1,
     .calendar-hero h1,
-    .join-hero h1{
-        font-size:2.8rem !important;
-        line-height:1;
+    .join-hero h1 {
+        font-size: 2.8rem !important;
+        line-height: 1;
     }
 
-    .hero-buttons{
-        flex-direction:column;
-        width:100%;
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
     }
 
     .btn-primary,
     .btn-secondary,
-    .btn{
-        width:100%;
-        text-align:center;
+    .btn {
+        width: 100%;
+        text-align: center;
     }
 
     .section,
     .coach-section-modern,
     .assistant-coach-section,
     .calendar-section,
-    .join-modern-section{
-        padding:70px 20px !important;
+    .join-modern-section {
+        padding: 70px 20px !important;
     }
 
-    h2{
-        font-size:2.1rem !important;
+    h2 {
+        font-size: 2.1rem !important;
     }
 
     .coach-card,
@@ -842,23 +845,23 @@ img{
     .location-card,
     .join-form-wrapper,
     .hero-card,
-    .floating-card{
-        padding:22px !important;
-        border-radius:18px;
+    .floating-card {
+        padding: 22px !important;
+        border-radius: 18px;
     }
 
-    .calendar-grid{
-        display:flex;
-        flex-direction:column;
-        gap:14px;
+    .calendar-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
     }
 
-    .calendar-day-header{
-        display:none;
+    .calendar-day-header {
+        display: none;
     }
 
-    .calendar-day.empty{
-        display:none;
+    .calendar-day.empty {
+        display: none;
     }
 
     .modern-form-grid,
@@ -867,15 +870,15 @@ img{
     .coach-info-grid,
     .feature-grid,
     .skill-grid,
-    .stats-row{
-        grid-template-columns:1fr !important;
+    .stats-row {
+        grid-template-columns: 1fr !important;
     }
 
     input,
     select,
     textarea,
-    button{
-        font-size:16px !important;
+    button {
+        font-size: 16px !important;
     }
 
 }
@@ -885,65 +888,66 @@ img{
    MOBILE FIXES
 ===================================================== */
 
-.mobile-menu-btn{
-    display:none;
-    background:none;
-    border:none;
-    color:white;
-    font-size:2rem;
-    cursor:pointer;
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
-@media(max-width:900px){
+@media(max-width:900px) {
 
-    header{
-        flex-wrap:wrap;
-        padding:16px 18px;
-        position:relative;
-        z-index:999;
+    header {
+        flex-wrap: wrap;
+        padding: 16px 18px;
+        position: relative;
+        z-index: 999;
     }
 
-    .mobile-menu-btn{
-        display:block;
+    .mobile-menu-btn {
+        display: block;
     }
 
-    nav{
-        display:none;
-        width:100%;
-        flex-direction:column;
-        gap:10px;
-        margin-top:16px;
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 16px;
     }
 
-    nav.mobile-open{
-        display:flex;
+    nav.mobile-open {
+        display: flex;
     }
 
-    nav a{
-        width:100%;
-        text-align:center;
-        padding:14px;
-        background:#111;
-        border-radius:12px;
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+        background: #111;
+        border-radius: 12px;
     }
 
-    .logo-area img{
-        height:55px;
+    .logo-area img {
+        height: 55px;
     }
 
 }
 
 /* Prevent hero image overlap */
 
-@media(max-width:900px){
+@media(max-width:900px) {
 
     .hero,
     .hero-section,
-    .hero-banner{
-        padding-top:140px !important;
+    .hero-banner {
+        padding-top: 140px !important;
     }
 
 }
+
 /* =====================================================
    FINAL MOBILE NAV OVERRIDE
 ===================================================== */
@@ -952,65 +956,577 @@ img{
    FINAL MOBILE HEADER FIX
 ===================================================== */
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px) {
 
-    header{
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-        flex-wrap:wrap;
-        padding:16px 18px;
-        position:relative;
-        z-index:9999;
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 16px 18px;
+        position: relative;
+        z-index: 9999;
     }
 
-    .logo-area{
-        display:flex;
-        align-items:center;
-        gap:12px;
-        max-width:75%;
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        max-width: 75%;
     }
 
-    .logo-area h1{
-        font-size:1.5rem;
-        line-height:1.1;
+    .logo-area h1 {
+        font-size: 1.5rem;
+        line-height: 1.1;
     }
 
-    .logo-area p{
-        font-size:.8rem;
+    .logo-area p {
+        font-size: .8rem;
     }
 
-    .mobile-menu-btn{
-        display:block !important;
-        background:none;
-        border:none;
-        color:white;
-        font-size:2rem;
-        cursor:pointer;
+    .mobile-menu-btn {
+        display: block !important;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
     }
 
-    header nav{
-        display:none !important;
-        width:100%;
-        flex-direction:column;
-        gap:12px;
-        margin-top:20px;
+    header nav {
+        display: none !important;
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 20px;
     }
 
-    header nav.mobile-open{
-        display:flex !important;
+    header nav.mobile-open {
+        display: flex !important;
     }
 
-    header nav a{
-        width:100%;
-        text-align:center;
-        padding:14px;
-        border-radius:12px;
-        background:rgba(255,255,255,.05);
+    header nav a {
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, .05);
     }
 
-    .hero{
-        padding-top:120px !important;
+    .hero {
+        padding-top: 120px !important;
     }
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: #0c0c0c;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        overflow-x: hidden;
+        line-height: 1.7;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+
+        background: rgba(0, 0, 0, .55);
+        backdrop-filter: blur(12px);
+
+        border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+        padding: 18px 40px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .logo-area img {
+        width: 60px;
+    }
+
+    .logo-area h1 {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+    }
+
+    .logo-area p {
+        color: #c9c9c9;
+        font-size: .85rem;
+    }
+
+    nav {
+        display: flex;
+        gap: 28px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        transition: .3s;
+    }
+
+    nav a:hover {
+        color: #f2c230;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+        position: relative;
+        min-height: 100vh;
+
+        background:
+            linear-gradient(to right,
+                rgba(0, 0, 0, .88),
+                rgba(0, 0, 0, .45)),
+            url('images/EarthquakeTeam4.jpg');
+
+        background-size: cover;
+        background-position: center;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-content {
+        width: 90%;
+        max-width: 1350px;
+        margin: auto;
+
+        display: grid;
+        grid-template-columns: 1.3fr .8fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .hero-left {
+        animation: fadeUp 1s ease;
+    }
+
+    .eyebrow {
+        color: #f2c230;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: .8rem;
+        font-weight: bold;
+    }
+
+    .hero-left h1 {
+        font-size: 6rem;
+        line-height: .92;
+        margin: 18px 0 24px;
+    }
+
+    .hero-left p {
+        max-width: 650px;
+        font-size: 1.15rem;
+        color: #d0d0d0;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 20px;
+        margin-top: 35px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 16px 28px;
+        border-radius: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: .3s;
+    }
+
+    .btn-primary {
+        background: #f2c230;
+        color: black;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+        border: 1px solid rgba(255, 255, 255, .25);
+        color: white;
+    }
+
+    .btn-secondary:hover {
+        background: rgba(255, 255, 255, .08);
+    }
+
+    .hero-card {
+        background: rgba(255, 255, 255, .08);
+        backdrop-filter: blur(12px);
+
+        border: 1px solid rgba(255, 255, 255, .12);
+
+        padding: 38px;
+        border-radius: 30px;
+
+        animation: fadeUp 1.2s ease;
+    }
+
+    .hero-card h3 {
+        margin-bottom: 28px;
+        font-size: 1.5rem;
+    }
+
+    .schedule-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .hero-card-footer {
+        margin-top: 25px;
+        color: #f2c230;
+        font-weight: bold;
+    }
+
+    /* ================= GENERAL ================= */
+
+    .container {
+        width: 90%;
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .section {
+        padding: 120px 0;
+    }
+
+    .section-tag {
+        color: #f2c230;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: .8rem;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 3rem;
+        line-height: 1.1;
+        margin: 18px 0 24px;
+    }
+
+    p {
+        color: #d4d4d4;
+    }
+
+    /* ================= ABOUT ================= */
+
+    .integrated-section {
+        position: relative;
+    }
+
+    .integrated-image img {
+        width: 100%;
+        border-radius: 36px;
+        box-shadow: 0 25px 80px rgba(0, 0, 0, .5);
+    }
+
+    .floating-card {
+        position: relative;
+
+        max-width: 760px;
+
+        margin: -140px auto 0;
+
+        background: #161616;
+
+        padding: 55px;
+
+        border-radius: 34px;
+
+        border: 1px solid rgba(255, 255, 255, .05);
+
+        box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
+    }
+
+    .feature-grid {
+        margin-top: 35px;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .feature-item {
+        background: #1d1d1d;
+        padding: 24px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, .04);
+    }
+
+    .feature-item h4 {
+        color: #f2c230;
+        margin-bottom: 10px;
+    }
+
+    /* ================= COACH ================= */
+
+    .coach-section {
+        background: #101010;
+    }
+
+    .coach-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .coach-photo img {
+        width: 100%;
+        border-radius: 30px;
+        box-shadow: 0 25px 80px rgba(0, 0, 0, .5);
+    }
+
+    .coach-intro {
+        margin-bottom: 30px;
+    }
+
+    .skill-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .skill-card {
+        background: #1b1b1b;
+        padding: 24px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, .04);
+    }
+
+    .skill-card h4 {
+        color: #f2c230;
+        margin-bottom: 10px;
+    }
+
+    /* ================= ACTION ================= */
+
+    .action-banner {
+        position: relative;
+        min-height: 760px;
+        display: flex;
+        align-items: center;
+    }
+
+    .action-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .action-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, .68);
+    }
+
+    .action-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .action-content h2 {
+        max-width: 700px;
+    }
+
+    .stats-row {
+        margin-top: 50px;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 25px;
+    }
+
+    .stat-card {
+        background: rgba(255, 255, 255, .08);
+
+        backdrop-filter: blur(10px);
+
+        padding: 32px;
+        border-radius: 22px;
+
+        border: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .stat-card h3 {
+        color: #f2c230;
+        margin-bottom: 12px;
+    }
+
+    /* ================= LOCATION ================= */
+
+    .location-layout {
+        display: grid;
+        grid-template-columns: 1.1fr .9fr;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .map-wrapper img {
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    .location-card {
+        background: #161616;
+        padding: 55px;
+        border-radius: 30px;
+    }
+
+    .info-box {
+        margin-top: 28px;
+        background: #1d1d1d;
+        padding: 24px;
+        border-radius: 20px;
+    }
+
+    .info-box h4 {
+        color: #f2c230;
+        margin-bottom: 12px;
+    }
+
+    .info-box ul {
+        padding-left: 18px;
+    }
+
+    .info-box li {
+        margin-bottom: 8px;
+        color: #d4d4d4;
+    }
+
+    /* ================= CTA ================= */
+
+    .cta {
+        background:
+            linear-gradient(to right,
+                rgba(0, 0, 0, .85),
+                rgba(0, 0, 0, .65)),
+            url('images/EarthquakeTeam1.jpg');
+
+        background-size: cover;
+        background-position: center;
+
+        text-align: center;
+    }
+
+    .cta p {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+        padding: 35px;
+        text-align: center;
+        background: black;
+        color: #aaa;
+    }
+
+    /* ================= ANIMATION ================= */
+
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media(max-width:1000px) {
+
+        .hero-content,
+        .coach-layout,
+        .location-layout {
+            grid-template-columns: 1fr;
+        }
+
+        .hero {
+            padding-top: 120px;
+            padding-bottom: 80px;
+        }
+
+        .hero-left h1 {
+            font-size: 4rem;
+        }
+
+        .floating-card {
+            margin-top: 30px;
+            padding: 35px;
+        }
+
+        header {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+    }
+
+    @media(max-width:700px) {
+
+        .hero-left h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+        }
+
+        .hero-buttons {
+            flex-direction: column;
+        }
+
+        .location-card,
+        .floating-card {
+            padding: 30px;
+        }
+
+    }
+
+
 
 }
