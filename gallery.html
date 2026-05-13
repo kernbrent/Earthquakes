@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Photo Gallery | NTX Earthquakes</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/header-loader.js"></script>
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero gallery-hero">
+
+        <div class="container">
+
+            <div class="section-tag">
+                NTX Earthquakes
+            </div>
+
+            <h1>Team Photo Gallery</h1>
+
+            <p class="hero-description">
+                A collection of moments from practices, training sessions,
+                team events, development camps, and game days with the
+                NTX Earthquakes family.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- GALLERY INTRO -->
+    <section class="section">
+
+        <div class="container">
+
+            <div class="glass-card gallery-intro">
+
+                <h2 class="section-title">
+                    Memories • Growth • Team Culture
+                </h2>
+
+                <p>
+                    This gallery showcases players, coaches, practices,
+                    competitions, and team experiences from the NTX
+                    Earthquakes program.
+                </p>
+
+                <p>
+                    <strong>How to use this gallery:</strong>
+                </p>
+
+                <ul class="gallery-help-list">
+
+                    <li>
+                        Click any image to open a larger version.
+                    </li>
+
+                    <li>
+                        Use the arrows to move between photos.
+                    </li>
+
+                    <li>
+                        Right-click an image and select
+                        <em>Save Image As</em>
+                        to download.
+                    </li>
+
+                    <li>
+                        On mobile devices, tap an image to enlarge it.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PHOTO GRID -->
+    <section class="section gallery-section">
+
+        <div class="container">
+
+            <div class="gallery-grid">
+
+                <!-- IMAGE 1 -->
+                <div class="gallery-item">
+                    <img src="images/GallaryImage1.jpeg" alt="NTX Earthquakes Training"
+                        onclick="openGalleryModal(this.src)" />
+                </div>
+
+                <!-- IMAGE 2 -->
+                <div class="gallery-item">
+                    <img src="images/GallaryImage2.jpeg" alt="NTX Earthquakes Practice"
+                        onclick="openGalleryModal(this.src)" />
+                </div>
+
+                <!-- IMAGE 3 -->
+                <div class="gallery-item">
+                    <img src="images/GallaryImage3.jpeg" alt="NTX Earthquakes Team"
+                        onclick="openGalleryModal(this.src)" />
+                </div>
+
+                <!-- IMAGE 4 -->
+                <div class="gallery-item">
+                    <img src="images/GallaryImage4.jpeg" alt="NTX Earthquakes Players"
+                        onclick="openGalleryModal(this.src)" />
+                </div>
+
+                <!-- IMAGE 5 -->
+                <div class="gallery-item">
+                    <img src="images/GallaryImage5.jpeg" alt="NTX Earthquakes Players"
+                        onclick="openGalleryModal(this.src)" />
+                </div>
+
+                <!-- IMAGE 6 -->
+                <div class="gallery-item">
+                    <img src="images/GallaryImage6.jpeg" alt="NTX Earthquakes Training Session"
+                        onclick="openGalleryModal(this.src)" />
+                </div>
+
+                <!-- IMAGE 7 -->
+                <div class="gallery-item">
+                    <img src="images/coach-team-1(1).jpg" alt="Coach Training Session"
+                        onclick="openGalleryModal(this.src)" />
+                </div>
+
+                <!-- IMAGE 8 -->
+                <div class="gallery-item">
+                    <img src="images/coach-team-2(1).jpg" alt="Coach Development Session"
+                        onclick="openGalleryModal(this.src)" />
+                </div>
+
+                <!-- IMAGE 9 -->
+                <div class="gallery-item">
+                    <img src="images/EarthquakeTeam1.jpg" alt="NTX Earthquakes Team"
+                        onclick="openGalleryModal(this.src)" />
+                </div>
+
+                <!-- IMAGE 10 -->
+                <div class="gallery-item">
+                    <img src="images/EarthquakeTeam2(1).png" alt="NTX Earthquakes Team"
+                        onclick="openGalleryModal(this.src)" />
+                </div>
+
+                <!-- IMAGE 11 -->
+                <div class="gallery-item">
+                    <img src="images/EarthquakeTeam3(1).png" alt="NTX Earthquakes Team"
+                        onclick="openGalleryModal(this.src)" />
+                </div>
+
+                <!-- IMAGE 12 -->
+                <div class="gallery-item">
+                    <img src="images/EarthquakeTeam4(1).jpg" alt="NTX Earthquakes Team"
+                        onclick="openGalleryModal(this.src)" />
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- IMAGE MODAL -->
+    <div id="galleryModal" class="gallery-modal">
+
+        <!-- CLOSE -->
+        <span class="gallery-close" onclick="closeGalleryModal()">
+            &times;
+        </span>
+
+        <!-- PREVIOUS -->
+        <button class="gallery-nav gallery-prev" onclick="changeGalleryImage(-1)">
+            &#10094;
+        </button>
+
+        <!-- IMAGE -->
+        <img class="gallery-modal-content" id="galleryModalImage" />
+
+        <!-- NEXT -->
+        <button class="gallery-nav gallery-next" onclick="changeGalleryImage(1)">
+            &#10095;
+        </button>
+
+    </div>
+
+    <!-- GALLERY SCRIPT -->
+    <script>
+
+        const galleryImages = [
+
+            "images/GallaryImage1.jpeg",
+            "images/GallaryImage2.jpeg",
+            "images/GallaryImage3.jpeg",
+            "images/GallaryImage4.jpeg",
+            "images/GallaryImage5.jpeg",
+            "images/GallaryImage6.jpeg",
+            "images/coach-team-1.jpg",
+            "images/coach-team-2.jpg",
+            "images/EarthquakeTeam1.jpg",
+            "images/EarthquakeTeam2.png",
+            "images/EarthquakeTeam3.png",
+            "images/EarthquakeTeam4.jpg"
+
+        ];
+
+        let currentGalleryIndex = 0;
+
+        function openGalleryModal(src) {
+
+            currentGalleryIndex = galleryImages.indexOf(src);
+
+            document.getElementById("galleryModal").style.display = "flex";
+
+            document.getElementById("galleryModalImage").src = src;
+        }
+
+        function closeGalleryModal() {
+
+            document.getElementById("galleryModal").style.display = "none";
+        }
+
+        function changeGalleryImage(direction) {
+
+            currentGalleryIndex += direction;
+
+            if (currentGalleryIndex < 0) {
+
+                currentGalleryIndex = galleryImages.length - 1;
+            }
+
+            if (currentGalleryIndex >= galleryImages.length) {
+
+                currentGalleryIndex = 0;
+            }
+
+            document.getElementById("galleryModalImage").src =
+                galleryImages[currentGalleryIndex];
+        }
+
+        window.onclick = function (event) {
+
+            const modal = document.getElementById("galleryModal");
+
+            if (event.target === modal) {
+
+                modal.style.display = "none";
+            }
+        };
+
+        document.addEventListener("keydown", function (event) {
+
+            const modal =
+                document.getElementById("galleryModal");
+
+            if (modal.style.display === "flex") {
+
+                if (event.key === "ArrowRight") {
+
+                    changeGalleryImage(1);
+                }
+
+                if (event.key === "ArrowLeft") {
+
+                    changeGalleryImage(-1);
+                }
+
+                if (event.key === "Escape") {
+
+                    closeGalleryModal();
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
