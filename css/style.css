@@ -2275,3 +2275,181 @@ html {
     }
 
 }
+/* =========================================
+   ADMIN PAYMENT OPTIONS
+========================================= */
+
+.payment-highlight-box {
+    text-align: center;
+}
+
+.monthly-subtext {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.82);
+    margin-top: 0.5rem;
+}
+
+.payment-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 2rem 0;
+}
+
+.payment-options-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.payment-options-subtext {
+    color: rgba(255, 255, 255, 0.72);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.payment-option-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+    padding: 1.75rem;
+    border-radius: 22px;
+
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+.payment-option-button:hover {
+    transform: translateY(-3px);
+}
+
+.payment-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.payment-logo {
+    width: 72px;
+    height: 72px;
+
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2.8rem;
+    font-weight: 900;
+
+    color: #ffffff;
+
+    flex-shrink: 0;
+}
+
+.cashapp-option {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 180, 60, 0.28),
+        rgba(0, 120, 40, 0.18)
+    );
+
+    border-color: rgba(0, 255, 100, 0.45);
+}
+
+.cashapp-option:hover {
+    box-shadow: 0 0 28px rgba(0, 255, 100, 0.18);
+}
+
+.cashapp-logo {
+    background: #00c853;
+}
+
+.venmo-option {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 120, 255, 0.28),
+        rgba(0, 80, 180, 0.18)
+    );
+
+    border-color: rgba(0, 140, 255, 0.45);
+}
+
+.venmo-option:hover {
+    box-shadow: 0 0 28px rgba(0, 140, 255, 0.18);
+}
+
+.venmo-logo {
+    background: #008cff;
+}
+
+.payment-text-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.payment-app-name {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.payment-app-subtext {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.payment-handle {
+    font-size: clamp(1rem, 1.5vw, 1.6rem);
+    font-weight: 800;
+    color: #ffffff;
+
+    text-align: right;
+    line-height: 1.2;
+
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.payment-note {
+    margin-top: 1.5rem;
+
+    font-style: italic;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .payment-option-button {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .payment-handle {
+        text-align: left;
+        font-size: 1.1rem;
+    }
+
+    .payment-logo {
+        width: 58px;
+        height: 58px;
+        font-size: 2.2rem;
+    }
+
+    .payment-app-name {
+        font-size: 1.5rem;
+    }
+
+    .payment-options-title {
+        font-size: 1.5rem;
+    }
+
+}
