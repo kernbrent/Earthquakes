@@ -1,0 +1,17 @@
+[
+  {
+    "Date": "2026-07-12",
+    "EarthquakesHome": "Y",
+    "EarthquakesWon": "Y",
+    "EarthquakesScore": 3,
+    "OpponentScore": 1,
+    "GoalScorers": [
+      7,
+      11
+    ],
+    "PlayersOfGame": [
+      10
+    ],
+    "Notes": "Sample result"
+  }
+]

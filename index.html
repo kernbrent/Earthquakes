@@ -56,7 +56,7 @@
                 <div class="recruitment-top">
 
                     <span class="section-tag">
-                        Join The Earthquakes
+                        Team Calendar Snapshot
                     </span>
 
 
@@ -66,37 +66,19 @@
                 <div class="recruitment-content">
 
                     <h3>
-                        Recruitment & Tryouts
+                        Upcoming Events
                     </h3>
 
                     <p class="recruitment-subtext">
-                        Seeking committed girls transitioning
-                        from recreational soccer into a
-                        competitive club environment.
+                        Below is the next three schedule team events. See the calendar for more details.
                     </p>
 
-                    <div class="tryout-row">
-                        <span>Monday • May 18</span>
-                        <span>6 PM – 7 PM</span>
-                    </div>
 
-                    <div class="tryout-row">
-                        <span>Thursday • May 21</span>
-                        <span>6 PM – 7 PM</span>
-                    </div>
-
-                    <div class="tryout-row">
-                        <span>Monday • May 25</span>
-                        <span>6 PM – 7 PM</span>
-                    </div>
-
-                    <div class="tryout-row">
-                        <span>Thursday • May 28</span>
-                        <span>6 PM – 7 PM</span>
-                    </div>
+                    <div id="upcoming-events"></div>
 
                     <div class="recruitment-goal-row">
-                        <span>Recruitment Goal - 8 New Girls</span>
+
+                        <span>Always looking for new talent</span>
                     </div>
 
                     <div class="recruitment-footer">
@@ -458,6 +440,98 @@
         }
 
     </script>
+
+
+    
+<script>
+function parseLocalDate(dateString) {
+    const [year, month, day] = dateString.split('-').map(Number);
+    return new Date(year, month - 1, day);
+}
+
+function generatePracticeEvents() {
+    const practices = [];
+
+    const startDate = new Date();
+    const endDate = new Date();
+    endDate.setFullYear(endDate.getFullYear() + 2);
+
+    const current = new Date(startDate);
+
+    while (current <= endDate) {
+        const dayOfWeek = current.getDay();
+
+        if (dayOfWeek === 1 || dayOfWeek === 4) {
+            practices.push({
+                Date: current.getFullYear() + '-' +
+                      String(current.getMonth() + 1).padStart(2, '0') + '-' +
+                      String(current.getDate()).padStart(2, '0'),
+                Time: '6:00 PM',
+                Location: 'The Grove - Frisco',
+                FieldNumber: '',
+                EventType: 'Practice'
+            });
+        }
+
+        current.setDate(current.getDate() + 1);
+    }
+
+    return practices;
+}
+
+async function loadUpcomingEvents() {
+    try {
+        const response = await fetch('data/calendar.json');
+        const specialEvents = await response.json();
+
+        const events = [
+            ...specialEvents,
+            ...generatePracticeEvents()
+        ];
+
+        const today = new Date();
+        today.setHours(0,0,0,0);
+
+        const upcoming = events
+            .filter(event => {
+                const eventDate = parseLocalDate(event.Date);
+                eventDate.setHours(0,0,0,0);
+                return eventDate >= today;
+            })
+            .sort((a,b) =>
+                parseLocalDate(a.Date) - parseLocalDate(b.Date)
+            )
+            .slice(0,3);
+
+        const container = document.getElementById('upcoming-events');
+        if (!container) return;
+
+        container.innerHTML = '';
+
+        upcoming.forEach(event => {
+            const eventDate = parseLocalDate(event.Date);
+            const isToday = eventDate.toDateString() === today.toDateString();
+
+            container.innerHTML += `
+                <div class="tryout-row ${isToday ? 'today' : ''}">
+                    <span>${event.EventType} • ${eventDate.toLocaleDateString('en-US', {
+                        weekday: 'short',
+                        month: 'short',
+                        day: 'numeric'
+                    })}</span>
+                    <span>${event.Time}</span>
+                </div>
+            `;
+        });
+    }
+    catch (err) {
+        console.error('Upcoming events failed to load:', err);
+    }
+}
+
+loadUpcomingEvents();
+</script>
+
 </body>
 
 </html>

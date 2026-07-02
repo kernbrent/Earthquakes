@@ -6,18 +6,6 @@ const monthNames = [
 const dayNames = [
     "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"
 ];
-/* DEBUGGING */
-
-window.onerror = function(msg, src, line, col, err) {
-
-    console.error(
-        'Calendar Error:',
-        msg,
-        'Line:',
-        line
-    );
-
-};
 
 
 function closeEventModal() {
@@ -86,133 +74,7 @@ function openPracticeModal(event) {
         .classList.add('active');
 
 }
-function openGameModal(event, result) {
 
-    const opponent =
-        event.Opponent || 'Opponent TBD';
-
-    const home =
-        result?.EarthquakesHome === 'Y';
-
-    const leftTeam =
-        home
-            ? 'NTX Earthquakes'
-            : opponent;
-
-    const rightTeam =
-        home
-            ? opponent
-            : 'NTX Earthquakes';
-
-    const score =
-        result
-            ? `${result.EarthquakesScore}-${result.OpponentScore}`
-            : 'TBD';
-
-    const goalScorers =
-        result?.GoalScorers?.length
-            ? result.GoalScorers
-                .map(j => `<div class="gold-player">⚽ ${playerName(j)}</div>`)
-                .join('')
-            : 'TBD';
-
-    const playersOfGame =
-        result?.PlayersOfGame?.length
-            ? result.PlayersOfGame
-                .map(j => `<div class="gold-player">⭐ ${playerName(j)}</div>`)
-                .join('')
-            : 'TBD';
-
-    const winner =
-        !result
-            ? 'TBD'
-            : result.EarthquakesWon === 'Y'
-                ? 'NTX Earthquakes'
-                : opponent;
-
-    let resultBadge = 'TBD';
-    let resultClass = 'result-tbd';
-
-    if (result) {
-
-        if (result.EarthquakesScore > result.OpponentScore) {
-            resultBadge = 'WIN';
-            resultClass = 'result-win';
-        }
-        else if (result.EarthquakesScore < result.OpponentScore) {
-            resultBadge = 'LOSS';
-            resultClass = 'result-loss';
-        }
-        else {
-            resultBadge = 'TIE';
-            resultClass = 'result-tie';
-        }
-    }
-
-    const html = `
-
-<div class="game-popup">
-
-    <div class="game-scoreboard">
-
-        <div class="team-name">${leftTeam}</div>
-
-        <div class="score">${score}</div>
-
-        <div class="team-name">${rightTeam}</div>
-
-    </div>
-
-    <div class="game-result-badge ${resultClass}">
-        ${resultBadge}
-    </div>
-
-    <div class="game-details">
-
-        <div class="game-card">
-            <h4>Winner</h4>
-            <p>${winner}</p>
-        </div>
-
-        <div class="game-card">
-            <h4>Location</h4>
-            <p>${event.Location}</p>
-        </div>
-
-        <div class="game-card">
-            <h4>Field</h4>
-            <p>${event.FieldNumber || 'TBD'}</p>
-        </div>
-
-        <div class="game-card">
-            <h4>Goal Scorers</h4>
-            ${goalScorers}
-        </div>
-
-        <div class="game-card">
-            <h4>Players of the Game</h4>
-            ${playersOfGame}
-        </div>
-
-        <div class="game-card">
-            <h4>Notes</h4>
-            <p>${result?.Notes || 'TBD'}</p>
-        </div>
-
-    </div>
-
-</div>
-`;
-
-    document
-        .getElementById('eventModalContent')
-        .innerHTML = html;
-
-    document
-        .getElementById('eventModal')
-        .classList.add('active');
-
-}
 let rosterData = [];
 let resultsData = [];
 
@@ -634,7 +496,196 @@ loadSupportingData()
                                                     r.Date === event.Date
                                             );
 
-                                        openGameModal(event, result);
+                                        let popupHtml = '';
+
+                                        if (!result) {
+
+                                            popupHtml = `
+
+                <div class="game-popup">
+
+                    <div class="game-matchup">
+
+                        NTX Earthquakes
+
+                        <br>
+
+                        vs
+
+                        <br>
+
+                        ${event.Opponent || 'TBD'}
+
+                    </div>
+
+                    <div class="game-score">
+
+                        TBD
+                    </div>
+
+                    <div class="game-details">
+
+                        <div class="game-card">
+
+                            <h4>
+                                Winner
+                            </h4>
+
+                            TBD
+
+                        </div>
+
+                        <div class="game-card">
+
+                            <h4>
+                                Location
+                            </h4>
+
+                            ${event.Location}
+
+                        </div>
+
+                        <div class="game-card">
+
+                            <h4>
+                                Goal Scorers
+                            </h4>
+
+                            TBD
+
+                        </div>
+
+                        <div class="game-card">
+
+                            <h4>
+                                Player(s) of Game
+                            </h4>
+
+                            TBD
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                `;
+
+                                        }
+                                        else {
+
+                                            const scorers =
+                                                (result.GoalScorers || [])
+                                                    .map(playerName)
+                                                    .join('<br>');
+
+                                            const pog =
+                                                (result.PlayersOfGame || [])
+                                                    .map(playerName)
+                                                    .join('<br>');
+
+                                            popupHtml = `
+
+                <div class="game-popup">
+
+                    <div class="game-matchup">
+
+                        NTX Earthquakes
+
+                        <br>
+
+                        vs
+
+                        <br>
+
+                        ${event.Opponent || 'TBD'}
+
+                    </div>
+
+                    <div class="game-score">
+
+                        ${result.EarthquakesScore}
+                        -
+                        ${result.OpponentScore}
+
+                    </div>
+
+                    <div class="game-details">
+
+                        <div class="game-card">
+
+                            <h4>
+                                Winner
+                            </h4>
+
+                            ${result.EarthquakesWon === 'Y'
+                                                    ? 'NTX Earthquakes'
+                                                    : event.Opponent
+                                                }
+
+                        </div>
+
+                        <div class="game-card">
+
+                            <h4>
+                                Location
+                            </h4>
+
+                            ${event.Location}
+
+                        </div>
+
+                        <div class="game-card">
+
+                            <h4>
+                                Goal Scorers
+                            </h4>
+
+                            ${scorers || 'None'}
+
+                        </div>
+
+                        <div class="game-card">
+
+                            <h4>
+                                Players of Game
+                            </h4>
+
+                            ${pog || 'None'}
+
+                        </div>
+
+                    </div>
+
+                    <div class="game-card">
+
+                        <h4>
+                            Notes
+                        </h4>
+
+                        ${result.Notes || ''}
+
+                    </div>
+
+                </div>
+
+                `;
+
+                                        }
+
+                                        document
+                                            .getElementById(
+                                                'eventModalContent'
+                                            )
+                                            .innerHTML =
+                                            popupHtml;
+
+                                        document
+                                            .getElementById(
+                                                'eventModal'
+                                            )
+                                            .classList
+                                            .add('active');
 
                                     }
                                 );

@@ -1,0 +1,86 @@
+[
+  {
+    "JerseyNumber": 1,
+    "FullName": "Player 1",
+    "Age": 12,
+    "YearsWithTeam": 2,
+    "School": "Frisco Elementary"
+  },
+  {
+    "JerseyNumber": 2,
+    "FullName": "Player 2",
+    "Age": 12,
+    "YearsWithTeam": 2,
+    "School": "Frisco Elementary"
+  },
+  {
+    "JerseyNumber": 3,
+    "FullName": "Player 3",
+    "Age": 12,
+    "YearsWithTeam": 2,
+    "School": "Frisco Elementary"
+  },
+  {
+    "JerseyNumber": 4,
+    "FullName": "Player 4",
+    "Age": 12,
+    "YearsWithTeam": 2,
+    "School": "Frisco Elementary"
+  },
+  {
+    "JerseyNumber": 5,
+    "FullName": "Player 5",
+    "Age": 12,
+    "YearsWithTeam": 2,
+    "School": "Frisco Elementary"
+  },
+  {
+    "JerseyNumber": 6,
+    "FullName": "Player 6",
+    "Age": 12,
+    "YearsWithTeam": 2,
+    "School": "Frisco Elementary"
+  },
+  {
+    "JerseyNumber": 7,
+    "FullName": "Player 7",
+    "Age": 12,
+    "YearsWithTeam": 2,
+    "School": "Frisco Elementary"
+  },
+  {
+    "JerseyNumber": 8,
+    "FullName": "Player 8",
+    "Age": 12,
+    "YearsWithTeam": 2,
+    "School": "Frisco Elementary"
+  },
+  {
+    "JerseyNumber": 9,
+    "FullName": "Player 9",
+    "Age": 12,
+    "YearsWithTeam": 2,
+    "School": "Frisco Elementary"
+  },
+  {
+    "JerseyNumber": 10,
+    "FullName": "Player 10",
+    "Age": 12,
+    "YearsWithTeam": 2,
+    "School": "Frisco Elementary"
+  },
+  {
+    "JerseyNumber": 11,
+    "FullName": "Player 11",
+    "Age": 12,
+    "YearsWithTeam": 2,
+    "School": "Frisco Elementary"
+  },
+  {
+    "JerseyNumber": 12,
+    "FullName": "Player 12",
+    "Age": 12,
+    "YearsWithTeam": 2,
+    "School": "Frisco Elementary"
+  }
+]
