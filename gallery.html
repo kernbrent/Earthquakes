@@ -92,98 +92,36 @@
 
         <div class="container">
 
-            <div class="gallery-grid">
-
-                <!-- IMAGE 1 -->
-                <div class="gallery-item">
-                    <img src="images/GallaryImage1.jpeg" alt="NTX Earthquakes Training"
-                        onclick="openGalleryModal(this.src)" />
-                </div>
-
-                <!-- IMAGE 2 -->
-                <div class="gallery-item">
-                    <img src="images/GallaryImage2.jpeg" alt="NTX Earthquakes Practice"
-                        onclick="openGalleryModal(this.src)" />
-                </div>
-
-                <!-- IMAGE 3 -->
-                <div class="gallery-item">
-                    <img src="images/GallaryImage3.jpeg" alt="NTX Earthquakes Team"
-                        onclick="openGalleryModal(this.src)" />
-                </div>
-
-                <!-- IMAGE 4 -->
-                <div class="gallery-item">
-                    <img src="images/GallaryImage4.jpeg" alt="NTX Earthquakes Players"
-                        onclick="openGalleryModal(this.src)" />
-                </div>
-
-                <!-- IMAGE 5 -->
-                <div class="gallery-item">
-                    <img src="images/GallaryImage5.jpeg" alt="NTX Earthquakes Players"
-                        onclick="openGalleryModal(this.src)" />
-                </div>
-
-                <!-- IMAGE 6 -->
-                <div class="gallery-item">
-                    <img src="images/GallaryImage6.jpeg" alt="NTX Earthquakes Training Session"
-                        onclick="openGalleryModal(this.src)" />
-                </div>
-
-                <!-- IMAGE 7 -->
-                <div class="gallery-item">
-                    <img src="images/coach-team-1.jpg" alt="Coach Training Session"
-                        onclick="openGalleryModal(this.src)" />
-                </div>
-
-                <!-- IMAGE 8 -->
-                <div class="gallery-item">
-                    <img src="images/coach-team-2.jpg" alt="Coach Development Session"
-                        onclick="openGalleryModal(this.src)" />
-                </div>
-
-                <!-- IMAGE 9 -->
-                <div class="gallery-item">
-                    <img src="images/EarthquakeTeam1.jpg" alt="NTX Earthquakes Team"
-                        onclick="openGalleryModal(this.src)" />
-                </div>
-
-                <!-- IMAGE 10 -->
-                <div class="gallery-item">
-                    <img src="images/EarthquakeTeam2.png" alt="NTX Earthquakes Team"
-                        onclick="openGalleryModal(this.src)" />
-                </div>
-
-                <!-- IMAGE 11 -->
-                <div class="gallery-item">
-                    <img src="images/EarthquakeTeam3.png" alt="NTX Earthquakes Team"
-                        onclick="openGalleryModal(this.src)" />
-                </div>
-
-            </div>
+            <div class="gallery-grid" id="galleryGrid"></div>
 
         </div>
 
     </section>
 
     <!-- IMAGE MODAL -->
-    <div id="galleryModal" class="gallery-modal">
+    <div id="galleryModal" class="gallery-modal" role="dialog" aria-modal="true"
+        aria-label="Photo gallery viewer">
 
         <!-- CLOSE -->
-        <span class="gallery-close" onclick="closeGalleryModal()">
+        <button class="gallery-close" type="button" onclick="closeGalleryModal()"
+            aria-label="Close photo viewer">
             &times;
-        </span>
+        </button>
 
         <!-- PREVIOUS -->
-        <button class="gallery-nav gallery-prev" onclick="changeGalleryImage(-1)">
+        <button class="gallery-nav gallery-prev" type="button"
+            onclick="changeGalleryImage(-1)" aria-label="Previous photo">
             &#10094;
         </button>
 
-        <!-- IMAGE -->
-        <img class="gallery-modal-content" id="galleryModalImage" />
+        <figure class="gallery-modal-figure">
+            <img class="gallery-modal-content" id="galleryModalImage" alt="" />
+            <figcaption class="gallery-modal-caption" id="galleryModalCaption"></figcaption>
+        </figure>
 
         <!-- NEXT -->
-        <button class="gallery-nav gallery-next" onclick="changeGalleryImage(1)">
+        <button class="gallery-nav gallery-next" type="button"
+            onclick="changeGalleryImage(1)" aria-label="Next photo">
             &#10095;
         </button>
 
@@ -192,89 +130,171 @@
     <!-- GALLERY SCRIPT -->
     <script>
 
+        // Add future photos here. The grid, captions, and modal are generated
+        // automatically from this single list.
         const galleryImages = [
-
-            "images/GallaryImage1.jpeg",
-            "images/GallaryImage2.jpeg",
-            "images/GallaryImage3.jpeg",
-            "images/GallaryImage4.jpeg",
-            "images/GallaryImage5.jpeg",
-            "images/GallaryImage6.jpeg",
-            "images/coach-team-1.jpg",
-            "images/coach-team-2.jpg",
-            "images/EarthquakeTeam1.jpg",
-            "images/EarthquakeTeam2.png",
-            "images/EarthquakeTeam3.png",
-
+            {
+                src: "images/GalleryImage1.jpg",
+                alt: "Coach Jamaal and Coach Chris with one of the girls",
+                caption: "Coach Jamaal and Coach Chris with one of the girls"
+            },
+            {
+                src: "images/GalleryImage2.jpg",
+                alt: "NTX Earthquakes pregame photo",
+                caption: "Pregame Photo"
+            },
+            {
+                src: "images/GalleryImage3.jpg",
+                alt: "NTX Earthquakes pregame photo",
+                caption: "Pregame Photo"
+            },
+            {
+                src: "images/GalleryImage4.jpg",
+                alt: "NTX Earthquakes silly pregame photo",
+                caption: "Silly Pregame Photo"
+            },
+            {
+                src: "images/GalleryImage5.jpg",
+                alt: "NTX Earthquakes practice running drills",
+                caption: "Practice - running drills"
+            },
+            {
+                src: "images/GalleryImage6.jpg",
+                alt: "NTX Earthquakes practice running drills",
+                caption: "Practice - running drills"
+            },
+            {
+                src: "images/GalleryImage7.jpg",
+                alt: "NTX Earthquakes team picture",
+                caption: "Team Picture"
+            },
+            {
+                src: "images/GalleryImage8.jpg",
+                alt: "Coach Calvin receiving the player of the tournament at the Gothia Cup in Gothenburg Sweden",
+                caption: "Coach Calvin receiving the player of the tournament at the Gothia Cup in Gothenburg Sweden"
+            },
+            {
+                src: "images/GalleryImage10.jpg",
+                alt: "Coach Calvin with the girls",
+                caption: "Coach Calvin with the girls"
+            },
+            {
+                src: "images/GalleryImage11.jpg",
+                alt: "Coach Calvin with the girls",
+                caption: "Coach Calvin with the girls"
+            },
+            {
+                src: "images/GalleryImage12.jpg",
+                alt: "Coach Calvin with the girls",
+                caption: "Coach Calvin with the girls"
+            },
+            {
+                src: "images/coach-team-1.jpg",
+                alt: "NTX Earthquakes coach training session",
+                caption: "NTX Earthquakes coaching gallery photo."
+            },
+            {
+                src: "images/coach-team-2.jpg",
+                alt: "NTX Earthquakes coach development session",
+                caption: "NTX Earthquakes coaching gallery photo."
+            },
+            {
+                src: "images/EarthquakeTeam1.jpg",
+                alt: "NTX Earthquakes team",
+                caption: "NTX Earthquakes team gallery photo."
+            },
+            {
+                src: "images/EarthquakeTeam2.png",
+                alt: "NTX Earthquakes team",
+                caption: "NTX Earthquakes team gallery photo."
+            },
+            {
+                src: "images/EarthquakeTeam3.png",
+                alt: "NTX Earthquakes team",
+                caption: "NTX Earthquakes team gallery photo."
+            }
         ];
 
         let currentGalleryIndex = 0;
 
-        function openGalleryModal(src) {
+        function renderGallery() {
+            const galleryGrid = document.getElementById("galleryGrid");
 
-            currentGalleryIndex = galleryImages.indexOf(src);
+            galleryImages.forEach((image, index) => {
+                const item = document.createElement("figure");
+                item.className = "gallery-item";
 
+                const button = document.createElement("button");
+                button.className = "gallery-image-button";
+                button.type = "button";
+                button.setAttribute("aria-label", `Open ${image.alt}`);
+                button.addEventListener("click", () => openGalleryModal(index));
+
+                const thumbnail = document.createElement("img");
+                thumbnail.src = image.src;
+                thumbnail.alt = image.alt;
+                thumbnail.loading = "lazy";
+
+                const caption = document.createElement("figcaption");
+                caption.className = "gallery-caption";
+                caption.textContent = image.caption;
+
+                button.appendChild(thumbnail);
+                item.append(button, caption);
+                galleryGrid.appendChild(item);
+            });
+        }
+
+        function updateGalleryModal() {
+            const image = galleryImages[currentGalleryIndex];
+            const modalImage = document.getElementById("galleryModalImage");
+
+            modalImage.src = image.src;
+            modalImage.alt = image.alt;
+            document.getElementById("galleryModalCaption").textContent =
+                image.caption;
+        }
+
+        function openGalleryModal(index) {
+            currentGalleryIndex = index;
+            updateGalleryModal();
             document.getElementById("galleryModal").style.display = "flex";
-
-            document.getElementById("galleryModalImage").src = src;
         }
 
         function closeGalleryModal() {
-
             document.getElementById("galleryModal").style.display = "none";
         }
 
         function changeGalleryImage(direction) {
-
-            currentGalleryIndex += direction;
-
-            if (currentGalleryIndex < 0) {
-
-                currentGalleryIndex = galleryImages.length - 1;
-            }
-
-            if (currentGalleryIndex >= galleryImages.length) {
-
-                currentGalleryIndex = 0;
-            }
-
-            document.getElementById("galleryModalImage").src =
-                galleryImages[currentGalleryIndex];
+            currentGalleryIndex =
+                (currentGalleryIndex + direction + galleryImages.length) %
+                galleryImages.length;
+            updateGalleryModal();
         }
 
         window.onclick = function (event) {
-
             const modal = document.getElementById("galleryModal");
-
             if (event.target === modal) {
-
-                modal.style.display = "none";
+                closeGalleryModal();
             }
         };
 
         document.addEventListener("keydown", function (event) {
-
-            const modal =
-                document.getElementById("galleryModal");
-
+            const modal = document.getElementById("galleryModal");
             if (modal.style.display === "flex") {
-
                 if (event.key === "ArrowRight") {
-
                     changeGalleryImage(1);
                 }
-
                 if (event.key === "ArrowLeft") {
-
                     changeGalleryImage(-1);
                 }
-
                 if (event.key === "Escape") {
-
                     closeGalleryModal();
                 }
             }
         });
+
+        renderGallery();
 
     </script>
     <script src="js/loadHeader.js"></script>
