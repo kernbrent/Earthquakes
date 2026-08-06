@@ -2745,3 +2745,28 @@ margin-bottom:20px;
     font-size:1.2rem;
     font-weight:700;
 }
+
+.developer-credit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    margin-top: 0.75rem;
+    color: inherit;
+    font-size: 0.78rem;
+    line-height: 1.35;
+    opacity: 0.72;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+.developer-credit:hover,
+.developer-credit:focus-visible { opacity: 1; }
+.developer-credit img {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex: 0 0 auto;
+    border-radius: 50%;
+}
+@media (max-width: 560px) {
+    .developer-credit { max-width: 19rem; text-align: left; }
+}
