@@ -274,8 +274,8 @@
 
                     <h4>Training Times</h4>
 
-                    <p>Monday & Thursday</p>
-                    <p>6:00 PM – 7:00 PM</p>
+                    <p>Mondays & Wednesdays</p>
+                    <p>7:00 PM</p>
 
                 </div>
 
@@ -462,12 +462,12 @@ function generatePracticeEvents() {
     while (current <= endDate) {
         const dayOfWeek = current.getDay();
 
-        if (dayOfWeek === 1 || dayOfWeek === 4) {
+        if (dayOfWeek === 1 || dayOfWeek === 3) {
             practices.push({
                 Date: current.getFullYear() + '-' +
                       String(current.getMonth() + 1).padStart(2, '0') + '-' +
                       String(current.getDate()).padStart(2, '0'),
-                Time: '6:00 PM',
+                Time: '7:00 PM',
                 Location: 'The Grove - Frisco',
                 FieldNumber: '',
                 EventType: 'Practice'

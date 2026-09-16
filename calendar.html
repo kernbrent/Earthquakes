@@ -63,13 +63,13 @@
 
             while (current <= endDate) {
                 const day = current.getDay();
-                if (day === 1 || day === 4) {
+                if (day === 1 || day === 3) {
                     practices.push({
                         Date:
                             current.getFullYear() + '-' +
                             String(current.getMonth() + 1).padStart(2, '0') + '-' +
                             String(current.getDate()).padStart(2, '0'),
-                        Time: '6:00 PM',
+                        Time: '7:00 PM',
                         Location: 'The Grove - Frisco',
                         FieldNumber: '',
                         EventType: 'Practice'
