@@ -1,0 +1,8 @@
+{
+ "name":"ntx-earthquakes-admin","private":true,"type":"module",
+ "scripts":{
+  "setup:local":"node tools/setup-local.mjs",
+  "dev":"node ../../careersteps/worker/node_modules/wrangler/bin/wrangler.js dev --local --port 8799 --local-upstream localhost:8799",
+  "deploy:dry":"node ../../careersteps/worker/node_modules/wrangler/bin/wrangler.js deploy --dry-run"
+ }
+}

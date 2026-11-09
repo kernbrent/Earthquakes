@@ -1,0 +1,61 @@
+{
+  "name": "ntx-earthquakes-admin",
+  "main": "src/entrypoint.mjs",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": {
+    "directory": "public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "routes": [
+    {
+      "pattern": "ntxearthquakes.com/admin",
+      "zone_name": "ntxearthquakes.com"
+    },
+    {
+      "pattern": "ntxearthquakes.com/admin/*",
+      "zone_name": "ntxearthquakes.com"
+    },
+    {
+      "pattern": "ntxearthquakes.com/api/site-admin/*",
+      "zone_name": "ntxearthquakes.com"
+    },
+    {
+      "pattern": "ntxearthquakes.com/data/calendar.json",
+      "zone_name": "ntxearthquakes.com"
+    },
+    {
+      "pattern": "ntxearthquakes.com/data/roster.json",
+      "zone_name": "ntxearthquakes.com"
+    },
+    {
+      "pattern": "ntxearthquakes.com/data/results.json",
+      "zone_name": "ntxearthquakes.com"
+    }
+  ],
+  "vars": {
+    "APP_ORIGIN": "https://ntxearthquakes.com",
+    "ADMIN_USERNAME": "admin@careersteps.net",
+    "SESSION_COOKIE": "__Host-ntx-admin",
+    "AUTH_LABEL": "team portal"
+  },
+  "account_id": "dd6360191de72c9a8f0b45e1676cec65",
+  "migrations": [
+    {
+      "tag": "team-admin-v1",
+      "new_sqlite_classes": [
+        "TeamStore"
+      ]
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "TEAM_STORE",
+        "class_name": "TeamStore"
+      }
+    ]
+  }
+}
